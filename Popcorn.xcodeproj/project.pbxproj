@@ -16,6 +16,10 @@
 		ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */; };
 		ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */; };
 		ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */; };
+		ECBFE8C81E30269E003ABF04 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C71E30269E003ABF04 /* Colors.txt */; };
+		ECBFE8CF1E3027A8003ABF04 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8CD1E3027A8003ABF04 /* Colors.swift */; };
+		ECBFE8D01E3027A8003ABF04 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */; };
+		ECBFE8D21E30282A003ABF04 /* SpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Specific.storyboard; sourceTree = "<group>"; };
+		ECBFE8C71E30269E003ABF04 /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
+		ECBFE8CD1E3027A8003ABF04 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		ECBFE8801E2FFEE3003ABF04 = {
 			isa = PBXGroup;
 			children = (
+				ECBFE8C71E30269E003ABF04 /* Colors.txt */,
 				ECBFE88B1E2FFEE3003ABF04 /* Popcorn */,
 				ECBFE89D1E2FFEE4003ABF04 /* PopcornTests */,
 				ECBFE8A81E2FFEE4003ABF04 /* PopcornUITests */,
@@ -105,6 +114,7 @@
 				ECBFE8BC1E30109F003ABF04 /*  Storyboards */,
 				ECBFE8B71E2FFF9B003ABF04 /* Assets */,
 				ECBFE8951E2FFEE3003ABF04 /* Info.plist */,
+				ECBFE8CC1E30278E003ABF04 /* Constants */,
 			);
 			path = Popcorn;
 			sourceTree = "<group>";
@@ -151,8 +161,18 @@
 				ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */,
 				ECBFE88E1E2FFEE3003ABF04 /* MenuViewController.swift */,
 				ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */,
+				ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */,
 			);
 			name = Code;
+			sourceTree = "<group>";
+		};
+		ECBFE8CC1E30278E003ABF04 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8CD1E3027A8003ABF04 /* Colors.swift */,
+				ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECBFE8AE1E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "Popcorn" */;
 			buildPhases = (
+				ECBFE8C41E302659003ABF04 /* SwiftGen */,
 				ECBFE8851E2FFEE3003ABF04 /* Sources */,
 				ECBFE8861E2FFEE3003ABF04 /* Frameworks */,
 				ECBFE8871E2FFEE3003ABF04 /* Resources */,
@@ -268,6 +289,7 @@
 				ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */,
 				ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */,
 				ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */,
+				ECBFE8C81E30269E003ABF04 /* Colors.txt in Resources */,
 				ECBFE8921E2FFEE3003ABF04 /* Video.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,12 +310,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ECBFE8C41E302659003ABF04 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen > /dev/null; then\nswiftgen storyboards \"$PROJECT_DIR/Popcorn\" --output \"$PROJECT_DIR/Popcorn/Constants/Storyboards.swift\" --template swift3\nswiftgen images \"$PROJECT_DIR/Popcorn\" --output \"$PROJECT_DIR/Popcorn/Constants/Images.swift\" --template swift3\nswiftgen colors \"$PROJECT_DIR/Colors.txt\" --output \"$PROJECT_DIR/Popcorn/Constants/Colors.swift\" --template swift3\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECBFE8851E2FFEE3003ABF04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECBFE88F1E2FFEE3003ABF04 /* MenuViewController.swift in Sources */,
+				ECBFE8D01E3027A8003ABF04 /* Storyboards.swift in Sources */,
+				ECBFE8D21E30282A003ABF04 /* SpecificViewController.swift in Sources */,
+				ECBFE8CF1E3027A8003ABF04 /* Colors.swift in Sources */,
 				ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */,
 				ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */,
 			);

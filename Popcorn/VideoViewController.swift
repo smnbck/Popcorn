@@ -98,8 +98,6 @@ class VideoViewController: UIViewController {
         self.menuIsActive = true
         self.fadeOutTimer?.invalidate()
         self.fadeOutTimer = nil
-//        self.view.removeGestureRecognizer(self.view.gestureRecognizers)//removeGestureRecognizer(self.menuGestureRecognizer!)
-//        self.view.removeGestureRecognizer(self.specificGestureRecognizer!)
         self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
     }
 }
