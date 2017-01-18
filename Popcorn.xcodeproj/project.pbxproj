@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */; };
+		ECBFE88F1E2FFEE3003ABF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */; };
+		ECBFE8921E2FFEE3003ABF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */; };
+		ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */; };
+		ECBFE89F1E2FFEE4003ABF04 /* PopcornTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE89E1E2FFEE4003ABF04 /* PopcornTests.swift */; };
+		ECBFE8AA1E2FFEE4003ABF04 /* PopcornUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECBFE89B1E2FFEE4003ABF04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECBFE8811E2FFEE3003ABF04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECBFE8881E2FFEE3003ABF04;
+			remoteInfo = Popcorn;
+		};
+		ECBFE8A61E2FFEE4003ABF04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECBFE8811E2FFEE3003ABF04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECBFE8881E2FFEE3003ABF04;
+			remoteInfo = Popcorn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECBFE8891E2FFEE3003ABF04 /* Popcorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popcorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECBFE8911E2FFEE3003ABF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECBFE8951E2FFEE3003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBFE89A1E2FFEE4003ABF04 /* PopcornTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopcornTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBFE89E1E2FFEE4003ABF04 /* PopcornTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopcornTests.swift; sourceTree = "<group>"; };
+		ECBFE8A01E2FFEE4003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBFE8A51E2FFEE4003ABF04 /* PopcornUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopcornUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopcornUITests.swift; sourceTree = "<group>"; };
+		ECBFE8AB1E2FFEE4003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECBFE8861E2FFEE3003ABF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8971E2FFEE4003ABF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8A21E2FFEE4003ABF04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECBFE8801E2FFEE3003ABF04 = {
+			isa = PBXGroup;
+			children = (
+				ECBFE88B1E2FFEE3003ABF04 /* Popcorn */,
+				ECBFE89D1E2FFEE4003ABF04 /* PopcornTests */,
+				ECBFE8A81E2FFEE4003ABF04 /* PopcornUITests */,
+				ECBFE88A1E2FFEE3003ABF04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECBFE88A1E2FFEE3003ABF04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8891E2FFEE3003ABF04 /* Popcorn.app */,
+				ECBFE89A1E2FFEE4003ABF04 /* PopcornTests.xctest */,
+				ECBFE8A51E2FFEE4003ABF04 /* PopcornUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECBFE88B1E2FFEE3003ABF04 /* Popcorn */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */,
+				ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */,
+				ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */,
+				ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */,
+				ECBFE8951E2FFEE3003ABF04 /* Info.plist */,
+			);
+			path = Popcorn;
+			sourceTree = "<group>";
+		};
+		ECBFE89D1E2FFEE4003ABF04 /* PopcornTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE89E1E2FFEE4003ABF04 /* PopcornTests.swift */,
+				ECBFE8A01E2FFEE4003ABF04 /* Info.plist */,
+			);
+			path = PopcornTests;
+			sourceTree = "<group>";
+		};
+		ECBFE8A81E2FFEE4003ABF04 /* PopcornUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */,
+				ECBFE8AB1E2FFEE4003ABF04 /* Info.plist */,
+			);
+			path = PopcornUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECBFE8881E2FFEE3003ABF04 /* Popcorn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBFE8AE1E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "Popcorn" */;
+			buildPhases = (
+				ECBFE8851E2FFEE3003ABF04 /* Sources */,
+				ECBFE8861E2FFEE3003ABF04 /* Frameworks */,
+				ECBFE8871E2FFEE3003ABF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Popcorn;
+			productName = Popcorn;
+			productReference = ECBFE8891E2FFEE3003ABF04 /* Popcorn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECBFE8991E2FFEE4003ABF04 /* PopcornTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBFE8B11E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornTests" */;
+			buildPhases = (
+				ECBFE8961E2FFEE4003ABF04 /* Sources */,
+				ECBFE8971E2FFEE4003ABF04 /* Frameworks */,
+				ECBFE8981E2FFEE4003ABF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECBFE89C1E2FFEE4003ABF04 /* PBXTargetDependency */,
+			);
+			name = PopcornTests;
+			productName = PopcornTests;
+			productReference = ECBFE89A1E2FFEE4003ABF04 /* PopcornTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECBFE8A41E2FFEE4003ABF04 /* PopcornUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBFE8B41E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornUITests" */;
+			buildPhases = (
+				ECBFE8A11E2FFEE4003ABF04 /* Sources */,
+				ECBFE8A21E2FFEE4003ABF04 /* Frameworks */,
+				ECBFE8A31E2FFEE4003ABF04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECBFE8A71E2FFEE4003ABF04 /* PBXTargetDependency */,
+			);
+			name = PopcornUITests;
+			productName = PopcornUITests;
+			productReference = ECBFE8A51E2FFEE4003ABF04 /* PopcornUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECBFE8811E2FFEE3003ABF04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Simon Back";
+				TargetAttributes = {
+					ECBFE8881E2FFEE3003ABF04 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VNVVY8QV7H;
+						ProvisioningStyle = Automatic;
+					};
+					ECBFE8991E2FFEE4003ABF04 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VNVVY8QV7H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECBFE8881E2FFEE3003ABF04;
+					};
+					ECBFE8A41E2FFEE4003ABF04 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VNVVY8QV7H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECBFE8881E2FFEE3003ABF04;
+					};
+				};
+			};
+			buildConfigurationList = ECBFE8841E2FFEE3003ABF04 /* Build configuration list for PBXProject "Popcorn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECBFE8801E2FFEE3003ABF04;
+			productRefGroup = ECBFE88A1E2FFEE3003ABF04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECBFE8881E2FFEE3003ABF04 /* Popcorn */,
+				ECBFE8991E2FFEE4003ABF04 /* PopcornTests */,
+				ECBFE8A41E2FFEE4003ABF04 /* PopcornUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECBFE8871E2FFEE3003ABF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */,
+				ECBFE8921E2FFEE3003ABF04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8981E2FFEE4003ABF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8A31E2FFEE4003ABF04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECBFE8851E2FFEE3003ABF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBFE88F1E2FFEE3003ABF04 /* ViewController.swift in Sources */,
+				ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8961E2FFEE4003ABF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBFE89F1E2FFEE4003ABF04 /* PopcornTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECBFE8A11E2FFEE4003ABF04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBFE8AA1E2FFEE4003ABF04 /* PopcornUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECBFE89C1E2FFEE4003ABF04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECBFE8881E2FFEE3003ABF04 /* Popcorn */;
+			targetProxy = ECBFE89B1E2FFEE4003ABF04 /* PBXContainerItemProxy */;
+		};
+		ECBFE8A71E2FFEE4003ABF04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECBFE8881E2FFEE3003ABF04 /* Popcorn */;
+			targetProxy = ECBFE8A61E2FFEE4003ABF04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECBFE8911E2FFEE3003ABF04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECBFE8AC1E2FFEE4003ABF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		ECBFE8AD1E2FFEE4003ABF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECBFE8AF1E2FFEE4003ABF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = Popcorn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.Popcorn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ECBFE8B01E2FFEE4003ABF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = Popcorn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.Popcorn";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ECBFE8B21E2FFEE4003ABF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = PopcornTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.PopcornTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popcorn.app/Popcorn";
+			};
+			name = Debug;
+		};
+		ECBFE8B31E2FFEE4003ABF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = PopcornTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.PopcornTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popcorn.app/Popcorn";
+			};
+			name = Release;
+		};
+		ECBFE8B51E2FFEE4003ABF04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = PopcornUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.PopcornUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Popcorn;
+			};
+			name = Debug;
+		};
+		ECBFE8B61E2FFEE4003ABF04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VNVVY8QV7H;
+				INFOPLIST_FILE = PopcornUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.simon-back.PopcornUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Popcorn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECBFE8841E2FFEE3003ABF04 /* Build configuration list for PBXProject "Popcorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECBFE8AC1E2FFEE4003ABF04 /* Debug */,
+				ECBFE8AD1E2FFEE4003ABF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECBFE8AE1E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "Popcorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECBFE8AF1E2FFEE4003ABF04 /* Debug */,
+				ECBFE8B01E2FFEE4003ABF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECBFE8B11E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECBFE8B21E2FFEE4003ABF04 /* Debug */,
+				ECBFE8B31E2FFEE4003ABF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECBFE8B41E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECBFE8B51E2FFEE4003ABF04 /* Debug */,
+				ECBFE8B61E2FFEE4003ABF04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECBFE8811E2FFEE3003ABF04 /* Project object */;
+}
