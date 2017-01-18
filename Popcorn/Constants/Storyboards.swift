@@ -42,8 +42,17 @@ extension UIViewController {
 }
 
 struct StoryboardScene {
-  enum Menu: StoryboardSceneType {
+  enum Menu: String, StoryboardSceneType {
     static let storyboardName = "Menu"
+
+    case menuScene = "Menu"
+    static func instantiateMenu() -> MenuViewController {
+      guard let vc = StoryboardScene.Menu.menuScene.viewController() as? MenuViewController
+      else {
+        fatalError("ViewController 'Menu' is not of the expected class MenuViewController.")
+      }
+      return vc
+    }
   }
   enum Specific: StoryboardSceneType {
     static let storyboardName = "Specific"

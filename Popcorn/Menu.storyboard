@@ -12,7 +12,7 @@
         <!--Menu View Controller-->
         <scene sceneID="WFJ-ex-LbK">
             <objects>
-                <viewController id="8eJ-06-8m7" customClass="MenuViewController" customModule="Popcorn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="8eJ-06-8m7" customClass="MenuViewController" customModule="Popcorn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J66-ka-DLd"/>
                         <viewControllerLayoutGuide type="bottom" id="vcR-TL-cej"/>

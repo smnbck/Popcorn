@@ -49,7 +49,7 @@ class VideoViewController: UIViewController {
     }
     
     func setupMenuView() {
-        self.menuView.alpha = 0
+            self.menuView.alpha = 0
     }
     
     func setupSpecificView() {
@@ -70,23 +70,37 @@ class VideoViewController: UIViewController {
     }
     
     func fadeOutOverlay() {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.menuView.alpha = 0
-            self.specificView.alpha = 0
-        })
+        if !self.menuIsActive {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.menuView.alpha = 0
+                self.specificView.alpha = 0
+            })
+        }
     }
-    
+
     func swipeToMenu() {
-        self.prepareForMenu()
+        self.prepareForSwipe()
         self.menuViewTopConstraint.constant = 0
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.5, animations: { 
             self.specificView.alpha = 0
             self.view.layoutIfNeeded()
+        }) { _ in
+            self.loadMenuViewController()
+        }
+    }
+    
+    func loadMenuViewController() {
+        if let menuViewController = StoryboardScene.Menu.menuScene.viewController() as? MenuViewController {
+            menuViewController.videoViewController = self
+            self.addChildViewController(menuViewController)
+            menuViewController.view.frame = CGRect(x: 0, y: 0, width: self.menuView.frame.size.width, height: self.menuView.frame.size.height)
+            self.menuView.addSubview(menuViewController.view)
+            menuViewController.didMove(toParentViewController: self)
         }
     }
     
     func swipeToSpecific() {
-        self.prepareForMenu()
+        self.prepareForSwipe()
         self.specificViewBottomConstraint.constant = 0
         UIView.animate(withDuration: 0.5) {
             self.menuView.alpha = 0
@@ -94,7 +108,7 @@ class VideoViewController: UIViewController {
         }
     }
     
-    func prepareForMenu() {
+    func prepareForSwipe() {
         self.menuIsActive = true
         self.fadeOutTimer?.invalidate()
         self.fadeOutTimer = nil

@@ -10,6 +10,8 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    var videoViewController: VideoViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
