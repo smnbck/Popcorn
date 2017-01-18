@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */; };
-		ECBFE88F1E2FFEE3003ABF04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */; };
-		ECBFE8921E2FFEE3003ABF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */; };
+		ECBFE88F1E2FFEE3003ABF04 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE88E1E2FFEE3003ABF04 /* MenuViewController.swift */; };
+		ECBFE8921E2FFEE3003ABF04 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8901E2FFEE3003ABF04 /* Video.storyboard */; };
 		ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */; };
 		ECBFE89F1E2FFEE4003ABF04 /* PopcornTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE89E1E2FFEE4003ABF04 /* PopcornTests.swift */; };
 		ECBFE8AA1E2FFEE4003ABF04 /* PopcornUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */; };
+		ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */; };
+		ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */; };
+		ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +38,8 @@
 /* Begin PBXFileReference section */
 		ECBFE8891E2FFEE3003ABF04 /* Popcorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popcorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECBFE8911E2FFEE3003ABF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECBFE88E1E2FFEE3003ABF04 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ECBFE8911E2FFEE3003ABF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Video.storyboard; sourceTree = "<group>"; };
 		ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBFE8951E2FFEE3003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECBFE89A1E2FFEE4003ABF04 /* PopcornTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopcornTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,9 @@
 		ECBFE8A51E2FFEE4003ABF04 /* PopcornUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopcornUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopcornUITests.swift; sourceTree = "<group>"; };
 		ECBFE8AB1E2FFEE4003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Specific.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +101,9 @@
 		ECBFE88B1E2FFEE3003ABF04 /* Popcorn */ = {
 			isa = PBXGroup;
 			children = (
-				ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */,
-				ECBFE88E1E2FFEE3003ABF04 /* ViewController.swift */,
-				ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */,
-				ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */,
+				ECBFE8BD1E3010D2003ABF04 /* Code */,
+				ECBFE8BC1E30109F003ABF04 /*  Storyboards */,
+				ECBFE8B71E2FFF9B003ABF04 /* Assets */,
 				ECBFE8951E2FFEE3003ABF04 /* Info.plist */,
 			);
 			path = Popcorn;
@@ -120,6 +125,34 @@
 				ECBFE8AB1E2FFEE4003ABF04 /* Info.plist */,
 			);
 			path = PopcornUITests;
+			sourceTree = "<group>";
+		};
+		ECBFE8B71E2FFF9B003ABF04 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8931E2FFEE3003ABF04 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		ECBFE8BC1E30109F003ABF04 /*  Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */,
+				ECBFE8901E2FFEE3003ABF04 /* Video.storyboard */,
+				ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */,
+			);
+			name = " Storyboards";
+			sourceTree = "<group>";
+		};
+		ECBFE8BD1E3010D2003ABF04 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */,
+				ECBFE88E1E2FFEE3003ABF04 /* MenuViewController.swift */,
+				ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */,
+			);
+			name = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */,
+				ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */,
 				ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */,
-				ECBFE8921E2FFEE3003ABF04 /* Main.storyboard in Resources */,
+				ECBFE8921E2FFEE3003ABF04 /* Video.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBFE88F1E2FFEE3003ABF04 /* ViewController.swift in Sources */,
+				ECBFE88F1E2FFEE3003ABF04 /* MenuViewController.swift in Sources */,
+				ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */,
 				ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,12 +331,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ECBFE8901E2FFEE3003ABF04 /* Main.storyboard */ = {
+		ECBFE8901E2FFEE3003ABF04 /* Video.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ECBFE8911E2FFEE3003ABF04 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Video.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
