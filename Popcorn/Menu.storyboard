@@ -21,20 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdQ-da-Qb1">
-                                <rect key="frame" x="907" y="474" width="106" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwj-t6-xQP">
+                                <rect key="frame" x="529" y="923" width="862" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <inset key="contentEdgeInsets" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
+                                <state key="normal" title="Zurück zu &quot;The Avengers: Age of Ultron&quot;"/>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.70673381979695438" green="0.38820830383565696" blue="0.13087826042245218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.64207249365786812" green="0.35185737571558029" blue="0.12127292046996184" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="focused">
+                                    <color key="titleColor" red="1" green="0.54929917449999999" blue="0.1851874875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="8eJ-06-8m7" eventType="primaryActionTriggered" id="2rX-Sw-NNG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="pdQ-da-Qb1" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" id="YbE-IQ-6Fl"/>
-                            <constraint firstItem="pdQ-da-Qb1" firstAttribute="centerY" secondItem="qZ1-5l-Hjq" secondAttribute="centerY" id="ZNa-1H-MtR"/>
+                            <constraint firstItem="uwj-t6-xQP" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" id="7T8-Ri-XqQ"/>
+                            <constraint firstItem="vcR-TL-cej" firstAttribute="top" secondItem="uwj-t6-xQP" secondAttribute="bottom" constant="24" id="YlF-6t-Kj3"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1920" height="1000"/>
+                    <connections>
+                        <outlet property="backButton" destination="uwj-t6-xQP" id="07S-bP-JH8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RI1-62-tJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

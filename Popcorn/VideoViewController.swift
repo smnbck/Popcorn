@@ -17,6 +17,7 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var specificView: UIVisualEffectView!
     @IBOutlet weak var specificViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var toMenuLabel: UILabel!
     
     // MARK: - Stored Properties
     var menuGestureRecognizer: UISwipeGestureRecognizer?
@@ -30,6 +31,10 @@ class VideoViewController: UIViewController {
         self.setupGestureRecognizers()
         self.setupMenuView()
         self.setupSpecificView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("appeared")
     }
     
     func setupGestureRecognizers() {
@@ -58,11 +63,12 @@ class VideoViewController: UIViewController {
     
     func fadeInOverlay() {
         if !self.menuIsActive {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.menuView.alpha = 1
                 self.specificView.alpha = 1
             }) { _ in
                 if !self.menuIsActive {
+                    self.fadeOutTimer?.invalidate()
                     self.fadeOutTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.fadeOutOverlay), userInfo: nil, repeats: false)
                 }
             }
@@ -71,7 +77,7 @@ class VideoViewController: UIViewController {
     
     func fadeOutOverlay() {
         if !self.menuIsActive {
-            UIView.animate(withDuration: 0.2, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.menuView.alpha = 0
                 self.specificView.alpha = 0
             })
@@ -81,12 +87,13 @@ class VideoViewController: UIViewController {
     func swipeToMenu() {
         self.prepareForSwipe()
         self.menuViewTopConstraint.constant = 0
+        
+        self.loadMenuViewController()
+        
         UIView.animate(withDuration: 0.5, animations: { 
             self.specificView.alpha = 0
             self.view.layoutIfNeeded()
-        }) { _ in
-            self.loadMenuViewController()
-        }
+        })
     }
     
     func loadMenuViewController() {
@@ -96,6 +103,10 @@ class VideoViewController: UIViewController {
             menuViewController.view.frame = CGRect(x: 0, y: 0, width: self.menuView.frame.size.width, height: self.menuView.frame.size.height)
             self.menuView.addSubview(menuViewController.view)
             menuViewController.didMove(toParentViewController: self)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.toMenuLabel.alpha = 0
+            })
         }
     }
     
@@ -113,5 +124,21 @@ class VideoViewController: UIViewController {
         self.fadeOutTimer?.invalidate()
         self.fadeOutTimer = nil
         self.view.gestureRecognizers?.forEach(self.view.removeGestureRecognizer)
+    }
+    
+    func hideMenus() {
+        self.menuViewTopConstraint.constant = -900
+        self.specificViewBottomConstraint.constant = -900
+        UIView.animate(withDuration: 0.5, animations: { 
+            self.toMenuLabel.alpha = 1
+            self.menuView.alpha = 1
+            self.specificView.alpha = 1
+            self.view.layoutIfNeeded()
+        }) { _ in
+            self.menuIsActive = false
+            self.fadeOutTimer?.invalidate()
+            self.fadeOutTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.fadeOutOverlay), userInfo: nil, repeats: false)
+            self.setupGestureRecognizers()
+        }
     }
 }

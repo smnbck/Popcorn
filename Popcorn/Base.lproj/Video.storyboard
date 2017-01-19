@@ -30,47 +30,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Cz-y3-wzd">
-                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="CQg-BJ-Hqe">
-                                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Menü" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM1-pO-dTJ">
+                                            <rect key="frame" x="856" y="923" width="209" height="53"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="CM1-pO-dTJ" secondAttribute="bottom" constant="24" id="0y9-87-WDl"/>
+                                        <constraint firstItem="CM1-pO-dTJ" firstAttribute="centerX" secondItem="rZc-B2-f1E" secondAttribute="centerX" id="HqJ-nG-J8o"/>
+                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="uBK-t3-rEZ"/>
                                 </constraints>
-                                <blurEffect style="extraDark"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rem-YJ-qnR">
                                 <rect key="frame" x="0.0" y="980" width="1920" height="1000"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ngW-XL-n5R">
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6XY-eJ-q8p">
-                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="1dp-bc-P7P">
-                                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
-                                    </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="1Bx-Gw-WS7"/>
                                 </constraints>
-                                <blurEffect style="extraDark"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,6 +78,7 @@
                         <outlet property="menuViewTopConstraint" destination="gk0-th-pFi" id="Z6Z-wp-ezv"/>
                         <outlet property="specificView" destination="Rem-YJ-qnR" id="b2b-sd-kuA"/>
                         <outlet property="specificViewBottomConstraint" destination="IKo-Gr-dRN" id="vgP-cO-1Fi"/>
+                        <outlet property="toMenuLabel" destination="CM1-pO-dTJ" id="Pdx-or-up6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
