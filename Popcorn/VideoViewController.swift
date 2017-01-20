@@ -146,7 +146,7 @@ class VideoViewController: UIViewController {
     
     func hideMenus() {
         self.topMenuViewConstraint.constant = -900
-        self.bottomMenuViewConstraint.constant = -820
+        self.bottomMenuViewConstraint.constant = -860
         UIView.animate(withDuration: 0.5, animations: { 
             self.toMenuLabel.alpha = 1
             self.topMenuView.alpha = 1

@@ -82,9 +82,14 @@ class TopMenuViewController: MenuViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailCell", for: indexPath)
         if let thumbnailCell = cell as? TopMenuCollectionViewCell {
-            thumbnailCell.thumbnailBackground.image = UIImage(named: "liveThumbnail")
+            thumbnailCell.thumbnailBackground.image = UIImage(named: "videoThumbnail")
             thumbnailCell.thumbnailBackground.adjustsImageWhenAncestorFocused = true
             thumbnailCell.thumbnailBackground.clipsToBounds = false
+            
+            thumbnailCell.thumbnailPreview.image = UIImage(named: "houseofcardsposter")
+            thumbnailCell.thumbnailPreview.adjustsImageWhenAncestorFocused = true
+            thumbnailCell.thumbnailPreview.clipsToBounds = false
+            
         }
         return cell
     }
