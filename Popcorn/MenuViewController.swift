@@ -10,9 +10,6 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
-    // MARK: - Outlets
-    @IBOutlet weak var backButton: UIButton!
-    
     // MARK: - Stored Properties
     var videoViewController: VideoViewController?
     
@@ -20,23 +17,21 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        animateMenu()
+        setupGestureRecognizer()
     }
 
-    func animateMenu() {
-        self.backButton.alpha = 0
-        UIView.animate(withDuration: 0.2) { 
-            self.backButton.alpha = 1
-        }
+    private func setupGestureRecognizer() {
+        let menuGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.prepareForRemoving))
+        menuGestureRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.menu.rawValue)];
+        self.view.addGestureRecognizer(menuGestureRecognizer)
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        print("backbutton pressed")
-        removeMenuViewController()
-    }
-    
-    func removeMenuViewController() {
+    func prepareForRemoving() {
         self.videoViewController?.hideMenus()
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.removeMenuViewController), userInfo: nil, repeats: false)
+    }
+    
+    @objc private func removeMenuViewController() {
         self.willMove(toParentViewController: nil)
         self.view.removeFromSuperview()
         self.removeFromParentViewController()

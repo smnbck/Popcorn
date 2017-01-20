@@ -48,10 +48,32 @@
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rem-YJ-qnR">
-                                <rect key="frame" x="0.0" y="980" width="1920" height="1000"/>
+                                <rect key="frame" x="0.0" y="900" width="1920" height="1000"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ngW-XL-n5R">
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers: Age of Ultron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czA-sE-eow">
+                                            <rect key="frame" x="732" y="100" width="457" height="53"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-Bl-cX0">
+                                            <rect key="frame" x="80" y="36" width="1760" height="36"/>
+                                            <color key="backgroundColor" red="0.93678616751573607" green="0.51336122597455502" blue="0.17693764413311283" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="aXI-gx-QxZ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="8wC-Bl-cX0" secondAttribute="trailing" constant="80" id="APB-Cb-m4z"/>
+                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="leading" secondItem="ngW-XL-n5R" secondAttribute="leading" constant="80" id="And-D3-N0L"/>
+                                        <constraint firstItem="czA-sE-eow" firstAttribute="centerX" secondItem="ngW-XL-n5R" secondAttribute="centerX" id="EFr-IT-cXI"/>
+                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="top" secondItem="ngW-XL-n5R" secondAttribute="top" constant="36" id="Wi9-Xd-Y1i"/>
+                                        <constraint firstItem="czA-sE-eow" firstAttribute="top" secondItem="8wC-Bl-cX0" secondAttribute="bottom" constant="28" id="unG-hT-3ra"/>
+                                    </constraints>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="1Bx-Gw-WS7"/>
@@ -64,7 +86,7 @@
                             <constraint firstAttribute="bottom" secondItem="JYp-nf-0Pj" secondAttribute="bottom" id="4NN-aw-Y8x"/>
                             <constraint firstAttribute="trailing" secondItem="Rem-YJ-qnR" secondAttribute="trailing" id="9dk-Og-LSH"/>
                             <constraint firstItem="UUd-PV-kpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hqq-VD-NjQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Rem-YJ-qnR" secondAttribute="bottom" constant="-900" id="IKo-Gr-dRN"/>
+                            <constraint firstAttribute="bottom" secondItem="Rem-YJ-qnR" secondAttribute="bottom" constant="-820" id="IKo-Gr-dRN"/>
                             <constraint firstAttribute="trailing" secondItem="UUd-PV-kpN" secondAttribute="trailing" id="MDY-Jd-9MC"/>
                             <constraint firstAttribute="trailing" secondItem="JYp-nf-0Pj" secondAttribute="trailing" id="MFU-VR-vMA"/>
                             <constraint firstItem="Rem-YJ-qnR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RfG-kv-2Ao"/>
@@ -74,11 +96,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuView" destination="UUd-PV-kpN" id="gaY-p5-m3u"/>
-                        <outlet property="menuViewTopConstraint" destination="gk0-th-pFi" id="Z6Z-wp-ezv"/>
-                        <outlet property="specificView" destination="Rem-YJ-qnR" id="b2b-sd-kuA"/>
-                        <outlet property="specificViewBottomConstraint" destination="IKo-Gr-dRN" id="vgP-cO-1Fi"/>
+                        <outlet property="bottomMenuView" destination="Rem-YJ-qnR" id="7ml-ti-LYl"/>
+                        <outlet property="bottomMenuViewConstraint" destination="IKo-Gr-dRN" id="zQm-EJ-G9r"/>
                         <outlet property="toMenuLabel" destination="CM1-pO-dTJ" id="Pdx-or-up6"/>
+                        <outlet property="topMenuView" destination="UUd-PV-kpN" id="v0L-j2-cYF"/>
+                        <outlet property="topMenuViewConstraint" destination="gk0-th-pFi" id="zrd-i8-ceW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,17 +11,17 @@ import UIKit
 class VideoViewController: UIViewController {
     
     // MARK: - Constraints
-    @IBOutlet weak var menuView: UIVisualEffectView!
-    @IBOutlet weak var menuViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topMenuView: UIVisualEffectView!
+    @IBOutlet weak var topMenuViewConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var specificView: UIVisualEffectView!
-    @IBOutlet weak var specificViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomMenuView: UIVisualEffectView!
+    @IBOutlet weak var bottomMenuViewConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var toMenuLabel: UILabel!
     
     // MARK: - Stored Properties
-    var menuGestureRecognizer: UISwipeGestureRecognizer?
-    var specificGestureRecognizer: UISwipeGestureRecognizer?
+    var topMenuGestureRecognizer: UISwipeGestureRecognizer?
+    var bottomMenuGestureRecognizer: UISwipeGestureRecognizer?
     var fadeOutTimer: Timer? = Timer()
     var menuIsActive = false
     
@@ -29,8 +29,8 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupGestureRecognizers()
-        self.setupMenuView()
-        self.setupSpecificView()
+        self.setupTopMenuView()
+        self.setupBottomMenuView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,13 +38,13 @@ class VideoViewController: UIViewController {
     }
     
     func setupGestureRecognizers() {
-        self.menuGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeToMenu))
-        self.menuGestureRecognizer?.direction = .down
-        self.view.addGestureRecognizer(self.menuGestureRecognizer!)
+        self.topMenuGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeToMenu))
+        self.topMenuGestureRecognizer?.direction = .down
+        self.view.addGestureRecognizer(self.topMenuGestureRecognizer!)
         
-        self.specificGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeToSpecific))
-        self.specificGestureRecognizer?.direction = .up
-        self.view.addGestureRecognizer(self.specificGestureRecognizer!)
+        self.bottomMenuGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeTobottomMenu))
+        self.bottomMenuGestureRecognizer?.direction = .up
+        self.view.addGestureRecognizer(self.bottomMenuGestureRecognizer!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -53,19 +53,19 @@ class VideoViewController: UIViewController {
         }
     }
     
-    func setupMenuView() {
-            self.menuView.alpha = 0
+    func setupTopMenuView() {
+            self.topMenuView.alpha = 0
     }
     
-    func setupSpecificView() {
-        self.specificView.alpha = 0
+    func setupBottomMenuView() {
+        self.bottomMenuView.alpha = 0
     }
     
     func fadeInOverlay() {
         if !self.menuIsActive {
             UIView.animate(withDuration: 0.3, animations: {
-                self.menuView.alpha = 1
-                self.specificView.alpha = 1
+                self.topMenuView.alpha = 1
+                self.bottomMenuView.alpha = 1
             }) { _ in
                 if !self.menuIsActive {
                     self.fadeOutTimer?.invalidate()
@@ -78,31 +78,31 @@ class VideoViewController: UIViewController {
     func fadeOutOverlay() {
         if !self.menuIsActive {
             UIView.animate(withDuration: 0.3, animations: {
-                self.menuView.alpha = 0
-                self.specificView.alpha = 0
+                self.topMenuView.alpha = 0
+                self.bottomMenuView.alpha = 0
             })
         }
     }
 
     func swipeToMenu() {
         self.prepareForSwipe()
-        self.menuViewTopConstraint.constant = 0
+        self.topMenuViewConstraint.constant = 0
+        self.bottomMenuViewConstraint.constant = -1000
         
-        self.loadMenuViewController()
+        self.loadTopMenuViewController()
         
-        UIView.animate(withDuration: 0.5, animations: { 
-            self.specificView.alpha = 0
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         })
     }
     
-    func loadMenuViewController() {
-        if let menuViewController = StoryboardScene.Menu.menuScene.viewController() as? MenuViewController {
-            menuViewController.videoViewController = self
-            self.addChildViewController(menuViewController)
-            menuViewController.view.frame = CGRect(x: 0, y: 0, width: self.menuView.frame.size.width, height: self.menuView.frame.size.height)
-            self.menuView.addSubview(menuViewController.view)
-            menuViewController.didMove(toParentViewController: self)
+    func loadTopMenuViewController() {
+        if let topMenuViewController = StoryboardScene.TopMenu.topMenuScene.viewController() as? TopMenuViewController {
+            topMenuViewController.videoViewController = self
+            self.addChildViewController(topMenuViewController)
+            topMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.topMenuView.frame.size.width, height: self.topMenuView.frame.size.height)
+            self.topMenuView.addSubview(topMenuViewController.view)
+            topMenuViewController.didMove(toParentViewController: self)
             
             UIView.animate(withDuration: 0.3, animations: {
                 self.toMenuLabel.alpha = 0
@@ -110,12 +110,30 @@ class VideoViewController: UIViewController {
         }
     }
     
-    func swipeToSpecific() {
+    func swipeTobottomMenu() {
         self.prepareForSwipe()
-        self.specificViewBottomConstraint.constant = 0
+        self.bottomMenuViewConstraint.constant = 0
+        self.topMenuViewConstraint.constant = -1000
+        
+        self.loadBottomMenuViewController()
+        
         UIView.animate(withDuration: 0.5) {
-            self.menuView.alpha = 0
+            
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    func loadBottomMenuViewController() {
+        if let bottomMenuViewController = StoryboardScene.BottomMenu.bottomMenuScene.viewController() as? BottomMenuViewController {
+            bottomMenuViewController.videoViewController = self
+            self.addChildViewController(bottomMenuViewController)
+            bottomMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.bottomMenuView.frame.size.width, height: self.bottomMenuView.frame.size.height)
+            self.bottomMenuView.addSubview(bottomMenuViewController.view)
+            bottomMenuViewController.didMove(toParentViewController: self)
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.toMenuLabel.alpha = 0
+            })
         }
     }
     
@@ -127,12 +145,12 @@ class VideoViewController: UIViewController {
     }
     
     func hideMenus() {
-        self.menuViewTopConstraint.constant = -900
-        self.specificViewBottomConstraint.constant = -900
+        self.topMenuViewConstraint.constant = -900
+        self.bottomMenuViewConstraint.constant = -820
         UIView.animate(withDuration: 0.5, animations: { 
             self.toMenuLabel.alpha = 1
-            self.menuView.alpha = 1
-            self.specificView.alpha = 1
+            self.topMenuView.alpha = 1
+            self.bottomMenuView.alpha = 1
             self.view.layoutIfNeeded()
         }) { _ in
             self.menuIsActive = false

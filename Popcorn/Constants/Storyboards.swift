@@ -42,20 +42,29 @@ extension UIViewController {
 }
 
 struct StoryboardScene {
-  enum Menu: String, StoryboardSceneType {
-    static let storyboardName = "Menu"
+  enum BottomMenu: String, StoryboardSceneType {
+    static let storyboardName = "BottomMenu"
 
-    case menuScene = "Menu"
-    static func instantiateMenu() -> MenuViewController {
-      guard let vc = StoryboardScene.Menu.menuScene.viewController() as? MenuViewController
+    case bottomMenuScene = "BottomMenu"
+    static func instantiateBottomMenu() -> BottomMenuViewController {
+      guard let vc = StoryboardScene.BottomMenu.bottomMenuScene.viewController() as? BottomMenuViewController
       else {
-        fatalError("ViewController 'Menu' is not of the expected class MenuViewController.")
+        fatalError("ViewController 'BottomMenu' is not of the expected class BottomMenuViewController.")
       }
       return vc
     }
   }
-  enum Specific: StoryboardSceneType {
-    static let storyboardName = "Specific"
+  enum TopMenu: String, StoryboardSceneType {
+    static let storyboardName = "TopMenu"
+
+    case topMenuScene = "TopMenu"
+    static func instantiateTopMenu() -> TopMenuViewController {
+      guard let vc = StoryboardScene.TopMenu.topMenuScene.viewController() as? TopMenuViewController
+      else {
+        fatalError("ViewController 'TopMenu' is not of the expected class TopMenuViewController.")
+      }
+      return vc
+    }
   }
   enum Video: StoryboardSceneType {
     static let storyboardName = "Video"

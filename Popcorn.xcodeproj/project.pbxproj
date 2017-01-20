@@ -14,12 +14,17 @@
 		ECBFE89F1E2FFEE4003ABF04 /* PopcornTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE89E1E2FFEE4003ABF04 /* PopcornTests.swift */; };
 		ECBFE8AA1E2FFEE4003ABF04 /* PopcornUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */; };
 		ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */; };
-		ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */; };
-		ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */; };
+		ECBFE8BF1E3023E2003ABF04 /* TopMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8BE1E3023E2003ABF04 /* TopMenu.storyboard */; };
+		ECBFE8C11E3023F0003ABF04 /* BottomMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C01E3023F0003ABF04 /* BottomMenu.storyboard */; };
 		ECBFE8C81E30269E003ABF04 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = ECBFE8C71E30269E003ABF04 /* Colors.txt */; };
 		ECBFE8CF1E3027A8003ABF04 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8CD1E3027A8003ABF04 /* Colors.swift */; };
 		ECBFE8D01E3027A8003ABF04 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */; };
-		ECBFE8D21E30282A003ABF04 /* SpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */; };
+		ECBFE8D21E30282A003ABF04 /* BottomMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8D11E30282A003ABF04 /* BottomMenuViewController.swift */; };
+		ECBFE8D81E319189003ABF04 /* TopMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8D71E319189003ABF04 /* TopMenuViewController.swift */; };
+		ECBFE8DB1E319F16003ABF04 /* TopMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8DA1E319F16003ABF04 /* TopMenuCollectionViewCell.swift */; };
+		ECBFE8DF1E31A0FC003ABF04 /* MediaStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8DE1E31A0FC003ABF04 /* MediaStream.swift */; };
+		ECBFE8E11E31A252003ABF04 /* VideoStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8E01E31A252003ABF04 /* VideoStream.swift */; };
+		ECBFE8E31E31A264003ABF04 /* LiveStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBFE8E21E31A264003ABF04 /* LiveStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +58,17 @@
 		ECBFE8A91E2FFEE4003ABF04 /* PopcornUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopcornUITests.swift; sourceTree = "<group>"; };
 		ECBFE8AB1E2FFEE4003ABF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Specific.storyboard; sourceTree = "<group>"; };
+		ECBFE8BE1E3023E2003ABF04 /* TopMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopMenu.storyboard; sourceTree = "<group>"; };
+		ECBFE8C01E3023F0003ABF04 /* BottomMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BottomMenu.storyboard; sourceTree = "<group>"; };
 		ECBFE8C71E30269E003ABF04 /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
 		ECBFE8CD1E3027A8003ABF04 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificViewController.swift; sourceTree = "<group>"; };
+		ECBFE8D11E30282A003ABF04 /* BottomMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomMenuViewController.swift; sourceTree = "<group>"; };
+		ECBFE8D71E319189003ABF04 /* TopMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuViewController.swift; sourceTree = "<group>"; };
+		ECBFE8DA1E319F16003ABF04 /* TopMenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECBFE8DE1E31A0FC003ABF04 /* MediaStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStream.swift; sourceTree = "<group>"; };
+		ECBFE8E01E31A252003ABF04 /* VideoStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStream.swift; sourceTree = "<group>"; };
+		ECBFE8E21E31A264003ABF04 /* LiveStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +158,9 @@
 		ECBFE8BC1E30109F003ABF04 /*  Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				ECBFE8BE1E3023E2003ABF04 /* Menu.storyboard */,
+				ECBFE8BE1E3023E2003ABF04 /* TopMenu.storyboard */,
 				ECBFE8901E2FFEE3003ABF04 /* Video.storyboard */,
-				ECBFE8C01E3023F0003ABF04 /* Specific.storyboard */,
+				ECBFE8C01E3023F0003ABF04 /* BottomMenu.storyboard */,
 			);
 			name = " Storyboards";
 			sourceTree = "<group>";
@@ -161,7 +171,9 @@
 				ECBFE88C1E2FFEE3003ABF04 /* AppDelegate.swift */,
 				ECBFE88E1E2FFEE3003ABF04 /* MenuViewController.swift */,
 				ECBFE8BA1E3000A6003ABF04 /* VideoViewController.swift */,
-				ECBFE8D11E30282A003ABF04 /* SpecificViewController.swift */,
+				ECBFE8DC1E319F1D003ABF04 /* TopMenu */,
+				ECBFE8DD1E319F28003ABF04 /* BottomMenu */,
+				ECBFE8D91E31977E003ABF04 /* Models */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -173,6 +185,33 @@
 				ECBFE8CE1E3027A8003ABF04 /* Storyboards.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		ECBFE8D91E31977E003ABF04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8DE1E31A0FC003ABF04 /* MediaStream.swift */,
+				ECBFE8E01E31A252003ABF04 /* VideoStream.swift */,
+				ECBFE8E21E31A264003ABF04 /* LiveStream.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ECBFE8DC1E319F1D003ABF04 /* TopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8D71E319189003ABF04 /* TopMenuViewController.swift */,
+				ECBFE8DA1E319F16003ABF04 /* TopMenuCollectionViewCell.swift */,
+			);
+			name = TopMenu;
+			sourceTree = "<group>";
+		};
+		ECBFE8DD1E319F28003ABF04 /* BottomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ECBFE8D11E30282A003ABF04 /* BottomMenuViewController.swift */,
+			);
+			name = BottomMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBFE8C11E3023F0003ABF04 /* Specific.storyboard in Resources */,
-				ECBFE8BF1E3023E2003ABF04 /* Menu.storyboard in Resources */,
+				ECBFE8C11E3023F0003ABF04 /* BottomMenu.storyboard in Resources */,
+				ECBFE8BF1E3023E2003ABF04 /* TopMenu.storyboard in Resources */,
 				ECBFE8941E2FFEE3003ABF04 /* Assets.xcassets in Resources */,
 				ECBFE8C81E30269E003ABF04 /* Colors.txt in Resources */,
 				ECBFE8921E2FFEE3003ABF04 /* Video.storyboard in Resources */,
@@ -333,9 +372,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBFE88F1E2FFEE3003ABF04 /* MenuViewController.swift in Sources */,
+				ECBFE8DB1E319F16003ABF04 /* TopMenuCollectionViewCell.swift in Sources */,
+				ECBFE8E31E31A264003ABF04 /* LiveStream.swift in Sources */,
 				ECBFE8D01E3027A8003ABF04 /* Storyboards.swift in Sources */,
-				ECBFE8D21E30282A003ABF04 /* SpecificViewController.swift in Sources */,
+				ECBFE8D81E319189003ABF04 /* TopMenuViewController.swift in Sources */,
+				ECBFE8D21E30282A003ABF04 /* BottomMenuViewController.swift in Sources */,
+				ECBFE8DF1E31A0FC003ABF04 /* MediaStream.swift in Sources */,
 				ECBFE8CF1E3027A8003ABF04 /* Colors.swift in Sources */,
+				ECBFE8E11E31A252003ABF04 /* VideoStream.swift in Sources */,
 				ECBFE8BB1E3000A6003ABF04 /* VideoViewController.swift in Sources */,
 				ECBFE88D1E2FFEE3003ABF04 /* AppDelegate.swift in Sources */,
 			);
@@ -580,6 +624,7 @@
 				ECBFE8B01E2FFEE4003ABF04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECBFE8B11E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornTests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +633,7 @@
 				ECBFE8B31E2FFEE4003ABF04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECBFE8B41E2FFEE4003ABF04 /* Build configuration list for PBXNativeTarget "PopcornUITests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +642,7 @@
 				ECBFE8B61E2FFEE4003ABF04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
