@@ -9,13 +9,16 @@
 import UIKit
 
 class MediaStream {
-    var name: String
+    var title: String
     var thumbnailImageString: String
     var playerImageString: String
     var description: String
+    var genre: String?
+    var usk: String?
+    var rating: String?
     
-    init(name: String, thumbnailImageString: String, playerImageString: String, description: String) {
-        self.name = name
+    init(title: String, thumbnailImageString: String, playerImageString: String, description: String, genre: String?, usk: String?, rating: String?) {
+        self.title = title
         self.thumbnailImageString = thumbnailImageString
         self.playerImageString = playerImageString
         self.description = description

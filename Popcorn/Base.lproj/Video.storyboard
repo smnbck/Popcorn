@@ -25,54 +25,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUd-PV-kpN">
-                                <rect key="frame" x="0.0" y="-900" width="1920" height="1000"/>
+                                <rect key="frame" x="0.0" y="-900" width="1920" height="1080"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rZc-B2-f1E">
-                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Menü" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM1-pO-dTJ">
-                                            <rect key="frame" x="856" y="923" width="209" height="53"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <rect key="frame" x="875" y="933" width="171" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="CM1-pO-dTJ" secondAttribute="bottom" constant="24" id="0y9-87-WDl"/>
+                                        <constraint firstAttribute="bottom" secondItem="CM1-pO-dTJ" secondAttribute="bottom" constant="104" id="0y9-87-WDl"/>
                                         <constraint firstItem="CM1-pO-dTJ" firstAttribute="centerX" secondItem="rZc-B2-f1E" secondAttribute="centerX" id="HqJ-nG-J8o"/>
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1000" id="uBK-t3-rEZ"/>
+                                    <constraint firstAttribute="height" constant="1080" id="uBK-t3-rEZ"/>
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rem-YJ-qnR">
-                                <rect key="frame" x="0.0" y="940" width="1920" height="1000"/>
+                                <rect key="frame" x="0.0" y="900" width="1920" height="1080"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ngW-XL-n5R">
-                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1000"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avengers: Age of Ultron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czA-sE-eow">
-                                            <rect key="frame" x="732" y="68" width="457" height="53"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoprogress" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-Bl-cX0">
+                                            <rect key="frame" x="70" y="131" width="1780" height="36"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-EL-Msv">
+                                            <rect key="frame" x="70" y="94" width="60" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoprogress" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-Bl-cX0">
-                                            <rect key="frame" x="80" y="16" width="1760" height="36"/>
-                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-77:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfz-gv-zgs">
+                                            <rect key="frame" x="1778" y="94" width="72" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="8wC-Bl-cX0" secondAttribute="trailing" constant="80" id="APB-Cb-m4z"/>
-                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="leading" secondItem="ngW-XL-n5R" secondAttribute="leading" constant="80" id="And-D3-N0L"/>
-                                        <constraint firstItem="czA-sE-eow" firstAttribute="centerX" secondItem="ngW-XL-n5R" secondAttribute="centerX" id="EFr-IT-cXI"/>
-                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="top" secondItem="ngW-XL-n5R" secondAttribute="top" constant="16" id="Wi9-Xd-Y1i"/>
-                                        <constraint firstItem="czA-sE-eow" firstAttribute="top" secondItem="8wC-Bl-cX0" secondAttribute="bottom" constant="16" id="unG-hT-3ra"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dfz-gv-zgs" secondAttribute="trailing" constant="70" id="0RP-M3-t1h"/>
+                                        <constraint firstItem="RDQ-EL-Msv" firstAttribute="top" secondItem="ngW-XL-n5R" secondAttribute="top" constant="94" id="8hp-hU-374"/>
+                                        <constraint firstAttribute="trailing" secondItem="8wC-Bl-cX0" secondAttribute="trailing" constant="70" id="APB-Cb-m4z"/>
+                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="leading" secondItem="ngW-XL-n5R" secondAttribute="leading" constant="70" id="And-D3-N0L"/>
+                                        <constraint firstItem="RDQ-EL-Msv" firstAttribute="leading" secondItem="ngW-XL-n5R" secondAttribute="leading" constant="70" id="OMJ-jM-vZV"/>
+                                        <constraint firstItem="Dfz-gv-zgs" firstAttribute="top" secondItem="ngW-XL-n5R" secondAttribute="top" constant="94" id="QoF-k6-rmo"/>
+                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="top" secondItem="Dfz-gv-zgs" secondAttribute="bottom" constant="8" id="gBX-dp-Uvt"/>
+                                        <constraint firstItem="8wC-Bl-cX0" firstAttribute="top" secondItem="RDQ-EL-Msv" secondAttribute="bottom" constant="8" id="irt-0N-2rW"/>
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1000" id="1Bx-Gw-WS7"/>
+                                    <constraint firstAttribute="height" constant="1080" id="1Bx-Gw-WS7"/>
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
@@ -82,7 +91,7 @@
                             <constraint firstAttribute="bottom" secondItem="JYp-nf-0Pj" secondAttribute="bottom" id="4NN-aw-Y8x"/>
                             <constraint firstAttribute="trailing" secondItem="Rem-YJ-qnR" secondAttribute="trailing" id="9dk-Og-LSH"/>
                             <constraint firstItem="UUd-PV-kpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hqq-VD-NjQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Rem-YJ-qnR" secondAttribute="bottom" constant="-860" id="IKo-Gr-dRN"/>
+                            <constraint firstAttribute="bottom" secondItem="Rem-YJ-qnR" secondAttribute="bottom" constant="-900" id="IKo-Gr-dRN"/>
                             <constraint firstAttribute="trailing" secondItem="UUd-PV-kpN" secondAttribute="trailing" id="MDY-Jd-9MC"/>
                             <constraint firstAttribute="trailing" secondItem="JYp-nf-0Pj" secondAttribute="trailing" id="MFU-VR-vMA"/>
                             <constraint firstItem="Rem-YJ-qnR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RfG-kv-2Ao"/>

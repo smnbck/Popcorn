@@ -54,6 +54,49 @@ struct StoryboardScene {
       return vc
     }
   }
+  enum Introduction: String, StoryboardSceneType {
+    static let storyboardName = "Introduction"
+
+    case introductionScene = "Introduction"
+    static func instantiateIntroduction() -> IntroductionViewController {
+      guard let vc = StoryboardScene.Introduction.introductionScene.viewController() as? IntroductionViewController
+      else {
+        fatalError("ViewController 'Introduction' is not of the expected class IntroductionViewController.")
+      }
+      return vc
+    }
+  }
+  enum Platforms: String, StoryboardSceneType {
+    static let storyboardName = "Platforms"
+
+    static func initialViewController() -> PlatformsViewController {
+      guard let vc = storyboard().instantiateInitialViewController() as? PlatformsViewController else {
+        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+      }
+      return vc
+    }
+
+    case platformsScene = "platforms"
+    static func instantiatePlatforms() -> PlatformsViewController {
+      guard let vc = StoryboardScene.Platforms.platformsScene.viewController() as? PlatformsViewController
+      else {
+        fatalError("ViewController 'platforms' is not of the expected class PlatformsViewController.")
+      }
+      return vc
+    }
+  }
+  enum Preview: String, StoryboardSceneType {
+    static let storyboardName = "Preview"
+
+    case previewScene = "preview"
+    static func instantiatePreview() -> PreviewViewController {
+      guard let vc = StoryboardScene.Preview.previewScene.viewController() as? PreviewViewController
+      else {
+        fatalError("ViewController 'preview' is not of the expected class PreviewViewController.")
+      }
+      return vc
+    }
+  }
   enum TopMenu: String, StoryboardSceneType {
     static let storyboardName = "TopMenu"
 

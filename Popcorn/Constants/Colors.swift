@@ -19,4 +19,33 @@ extension Color {
   }
 }
 
-// No color found
+// swiftlint:disable file_length
+// swiftlint:disable line_length
+
+// swiftlint:disable type_body_length
+enum ColorName {
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff006d"></span>
+  /// Alpha: 100% <br/> (0xff006dff)
+  case magenta
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa900"></span>
+  /// Alpha: 100% <br/> (0xffa900ff)
+  case orange
+
+  var rgbaValue: UInt32 {
+    switch self {
+    case .magenta: return 0xff006dff
+    case .orange: return 0xffa900ff
+    }
+  }
+
+  var color: Color {
+    return Color(named: self)
+  }
+}
+// swiftlint:enable type_body_length
+
+extension Color {
+  convenience init(named name: ColorName) {
+    self.init(rgbaValue: name.rgbaValue)
+  }
+}

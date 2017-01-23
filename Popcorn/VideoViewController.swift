@@ -11,6 +11,7 @@ import UIKit
 class VideoViewController: UIViewController {
     
     // MARK: - Constraints
+    let defaults = UserDefaults.standard
     @IBOutlet weak var topMenuView: UIVisualEffectView!
     @IBOutlet weak var topMenuViewConstraint: NSLayoutConstraint!
     
@@ -28,13 +29,17 @@ class VideoViewController: UIViewController {
     // MARK: - Class Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setupGestureRecognizers()
         self.setupTopMenuView()
         self.setupBottomMenuView()
+        self.fadeInOverlay()
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("appeared")
+        super.viewDidAppear(false)
     }
     
     func setupGestureRecognizers() {
@@ -54,11 +59,22 @@ class VideoViewController: UIViewController {
     }
     
     func setupTopMenuView() {
-            self.topMenuView.alpha = 0
+        let maskImage = UIImage(named: "topviewmask")
+        let mask = CALayer()
+        
+        mask.contents = maskImage?.cgImage
+        mask.frame = CGRect(x: 0, y: 0, width: (maskImage?.size.width)!, height: (maskImage?.size.height)!)
+        self.topMenuView.layer.mask = mask
+        self.topMenuView.layer.masksToBounds = true
     }
     
     func setupBottomMenuView() {
-        self.bottomMenuView.alpha = 0
+        let maskImage = UIImage(named: "bottomviewmask")
+        let mask = CALayer()
+        mask.contents = maskImage?.cgImage
+        mask.frame = CGRect(x: 0, y: 0, width: (maskImage?.size.width)!, height: (maskImage?.size.height)!)
+        self.bottomMenuView.layer.mask = mask
+        self.bottomMenuView.layer.masksToBounds = true
     }
     
     func fadeInOverlay() {
@@ -87,7 +103,7 @@ class VideoViewController: UIViewController {
     func swipeToMenu() {
         self.prepareForSwipe()
         self.topMenuViewConstraint.constant = 0
-        self.bottomMenuViewConstraint.constant = -1000
+        self.bottomMenuViewConstraint.constant = -1080
         
         self.loadTopMenuViewController()
         
@@ -113,7 +129,7 @@ class VideoViewController: UIViewController {
     func swipeTobottomMenu() {
         self.prepareForSwipe()
         self.bottomMenuViewConstraint.constant = 0
-        self.topMenuViewConstraint.constant = -1000
+        self.topMenuViewConstraint.constant = -1080
         
         self.loadBottomMenuViewController()
         
@@ -146,7 +162,7 @@ class VideoViewController: UIViewController {
     
     func hideMenus() {
         self.topMenuViewConstraint.constant = -900
-        self.bottomMenuViewConstraint.constant = -860
+        self.bottomMenuViewConstraint.constant = -900
         UIView.animate(withDuration: 0.5, animations: { 
             self.toMenuLabel.alpha = 1
             self.topMenuView.alpha = 1

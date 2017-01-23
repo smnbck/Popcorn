@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview View Controller-->
+        <scene sceneID="Rbo-g7-efp">
+            <objects>
+                <viewController storyboardIdentifier="preview" id="CHk-YS-cl9" customClass="PreviewViewController" customModule="Popcorn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gVB-Sb-4cr"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8y-ed-CCN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BJK-V4-tw6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-GN-0xk">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bsD-Q6-f0D">
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0P2-Sw-Eqa">
+                                            <rect key="frame" x="70" y="36" width="1780" height="270"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7U-XO-xTw">
+                                                    <rect key="frame" x="396" y="0.0" width="1384" height="55"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama, USK 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-mk-mV9">
+                                                    <rect key="frame" x="396" y="63" width="238" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T1-YA-zvW">
+                                                    <rect key="frame" x="396" y="114" width="1384" height="115"/>
+                                                    <string key="text">Weil der frisch gewählte US-Präsident Walker ihm das fest versprochene Amt des Außenministers verwehrt hat, plant der machtbesessene Kongressabgeordnete Francis Underwood eine Intrige gegen die Regierung.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-hE-6On">
+                                                    <rect key="frame" x="1592" y="63" width="86" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9,0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVe-Vg-4zx">
+                                                    <rect key="frame" x="1730" y="63" width="50" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="e3f-tx-HJW">
+                                                    <rect key="frame" x="1686" y="66" width="36" height="36"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="LPL-ry-ePp"/>
+                                                        <constraint firstAttribute="width" constant="36" id="lCR-A9-uTo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseofcardsposter" translatesAutoresizingMaskIntoConstraints="NO" id="Wcu-8o-Dsn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="270"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Wcu-8o-Dsn" secondAttribute="height" multiplier="4:3" id="xBG-lh-wk3"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="R7U-XO-xTw" secondAttribute="trailing" id="E0v-kJ-GBk"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wcu-8o-Dsn" secondAttribute="bottom" id="F0z-mQ-AYq"/>
+                                                <constraint firstItem="Wcu-8o-Dsn" firstAttribute="leading" secondItem="0P2-Sw-Eqa" secondAttribute="leading" id="G7E-Yc-BhC"/>
+                                                <constraint firstItem="e3f-tx-HJW" firstAttribute="leading" secondItem="h8U-hE-6On" secondAttribute="trailing" constant="8" id="IDO-gl-2sN"/>
+                                                <constraint firstItem="Wcu-8o-Dsn" firstAttribute="top" secondItem="0P2-Sw-Eqa" secondAttribute="top" id="KEQ-8J-F9A"/>
+                                                <constraint firstItem="7T1-YA-zvW" firstAttribute="top" secondItem="kVe-Vg-4zx" secondAttribute="bottom" constant="8" id="MrJ-KU-pyu"/>
+                                                <constraint firstItem="Rax-mk-mV9" firstAttribute="leading" secondItem="Wcu-8o-Dsn" secondAttribute="trailing" constant="36" id="RdK-Rz-NwX"/>
+                                                <constraint firstItem="7T1-YA-zvW" firstAttribute="top" secondItem="Rax-mk-mV9" secondAttribute="bottom" constant="8" id="d2N-Ky-Asp"/>
+                                                <constraint firstAttribute="trailing" secondItem="kVe-Vg-4zx" secondAttribute="trailing" id="en1-PJ-IFG"/>
+                                                <constraint firstItem="Rax-mk-mV9" firstAttribute="top" secondItem="R7U-XO-xTw" secondAttribute="bottom" constant="8" id="fqe-KU-ypa"/>
+                                                <constraint firstItem="e3f-tx-HJW" firstAttribute="top" secondItem="R7U-XO-xTw" secondAttribute="bottom" constant="11" id="i9r-8P-9NZ"/>
+                                                <constraint firstAttribute="height" constant="270" id="jT0-VM-fLh"/>
+                                                <constraint firstItem="kVe-Vg-4zx" firstAttribute="centerY" secondItem="h8U-hE-6On" secondAttribute="centerY" id="kA6-mI-nZ9"/>
+                                                <constraint firstAttribute="trailing" secondItem="7T1-YA-zvW" secondAttribute="trailing" id="mqx-2h-9wl"/>
+                                                <constraint firstItem="R7U-XO-xTw" firstAttribute="top" secondItem="0P2-Sw-Eqa" secondAttribute="top" id="nQy-9I-xxD"/>
+                                                <constraint firstItem="R7U-XO-xTw" firstAttribute="leading" secondItem="Wcu-8o-Dsn" secondAttribute="trailing" constant="36" id="o1w-1T-bmc"/>
+                                                <constraint firstItem="kVe-Vg-4zx" firstAttribute="top" secondItem="R7U-XO-xTw" secondAttribute="bottom" constant="8" id="pnR-9I-AgF"/>
+                                                <constraint firstItem="7T1-YA-zvW" firstAttribute="leading" secondItem="Wcu-8o-Dsn" secondAttribute="trailing" constant="36" id="tKK-mB-tJx"/>
+                                                <constraint firstItem="kVe-Vg-4zx" firstAttribute="leading" secondItem="e3f-tx-HJW" secondAttribute="trailing" constant="8" id="unz-im-xBb"/>
+                                            </constraints>
+                                        </view>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="192" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-wy-F7k">
+                                            <rect key="frame" x="70" y="342" width="1780" height="674"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <prototypes>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeCell" focusStyle="custom" rowHeight="192" id="7cY-3Z-moX" customClass="PreviewTableViewCell" customModule="Popcorn" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="66" width="1780" height="192"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cY-3Z-moX" id="3hn-AF-2ks">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1764" height="192"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 1: Die Intrige" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODH-QP-Drr">
+                                                                <rect key="frame" x="16" y="8" width="331" height="43"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier steht was alles in dieser spannenden Folge passieren wird." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-3d-dFI">
+                                                                <rect key="frame" x="16" y="59" width="1417" height="39"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseofcardsposter" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-S4-PnC">
+                                                                <rect key="frame" x="1469" y="12" width="299" height="168"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="4gC-S4-PnC" secondAttribute="height" multiplier="16:9" id="G97-Fa-cdh"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="ODH-QP-Drr" firstAttribute="top" secondItem="3hn-AF-2ks" secondAttribute="topMargin" id="BJA-wk-ufE"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4gC-S4-PnC" secondAttribute="trailing" constant="12" id="Djj-u4-rEF"/>
+                                                            <constraint firstItem="4gC-S4-PnC" firstAttribute="leading" secondItem="DCn-3d-dFI" secondAttribute="trailing" constant="36" id="GlJ-gZ-WwG"/>
+                                                            <constraint firstItem="DCn-3d-dFI" firstAttribute="top" secondItem="ODH-QP-Drr" secondAttribute="bottom" constant="8" id="LNT-VO-KR4"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4gC-S4-PnC" secondAttribute="bottom" constant="12" id="aK6-hN-IbY"/>
+                                                            <constraint firstItem="4gC-S4-PnC" firstAttribute="top" secondItem="3hn-AF-2ks" secondAttribute="top" constant="12" id="blR-T5-JVI"/>
+                                                            <constraint firstItem="DCn-3d-dFI" firstAttribute="leading" secondItem="3hn-AF-2ks" secondAttribute="leadingMargin" constant="8" id="hB0-rZ-BIz"/>
+                                                            <constraint firstItem="ODH-QP-Drr" firstAttribute="leading" secondItem="3hn-AF-2ks" secondAttribute="leadingMargin" constant="8" id="xBe-6q-5P0"/>
+                                                        </constraints>
+                                                    </tableViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="episodeDescription" destination="DCn-3d-dFI" id="594-ja-9w3"/>
+                                                        <outlet property="episodeThumbnail" destination="4gC-S4-PnC" id="wuM-o8-1P7"/>
+                                                        <outlet property="episodeTitle" destination="ODH-QP-Drr" id="3Yg-DF-S8Z"/>
+                                                    </connections>
+                                                </tableViewCell>
+                                            </prototypes>
+                                            <connections>
+                                                <outlet property="dataSource" destination="CHk-YS-cl9" id="Ckg-gZ-yet"/>
+                                                <outlet property="delegate" destination="CHk-YS-cl9" id="PWb-Dn-0aW"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kEH-wy-F7k" firstAttribute="top" secondItem="0P2-Sw-Eqa" secondAttribute="bottom" constant="36" id="5vr-4S-tfv"/>
+                                        <constraint firstItem="0P2-Sw-Eqa" firstAttribute="top" secondItem="bsD-Q6-f0D" secondAttribute="top" constant="36" id="FdL-uh-aTz"/>
+                                        <constraint firstAttribute="trailing" secondItem="kEH-wy-F7k" secondAttribute="trailing" constant="70" id="H4v-G4-1xX"/>
+                                        <constraint firstAttribute="trailing" secondItem="0P2-Sw-Eqa" secondAttribute="trailing" constant="70" id="Kwc-ou-OmK"/>
+                                        <constraint firstItem="kEH-wy-F7k" firstAttribute="leading" secondItem="bsD-Q6-f0D" secondAttribute="leading" constant="70" id="OYc-Di-KLA"/>
+                                        <constraint firstItem="0P2-Sw-Eqa" firstAttribute="leading" secondItem="bsD-Q6-f0D" secondAttribute="leading" constant="70" id="W7j-Bg-bvB"/>
+                                        <constraint firstAttribute="bottom" secondItem="kEH-wy-F7k" secondAttribute="bottom" constant="64" id="utK-kG-L7t"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="B9b-GN-0xk" firstAttribute="leading" secondItem="BJK-V4-tw6" secondAttribute="leading" id="MrI-9s-upD"/>
+                            <constraint firstItem="b8y-ed-CCN" firstAttribute="top" secondItem="B9b-GN-0xk" secondAttribute="bottom" id="i5n-cE-gYR"/>
+                            <constraint firstItem="B9b-GN-0xk" firstAttribute="top" secondItem="gVB-Sb-4cr" secondAttribute="bottom" id="orC-xo-VjC"/>
+                            <constraint firstAttribute="trailing" secondItem="B9b-GN-0xk" secondAttribute="trailing" id="wnf-OM-VPh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="7T1-YA-zvW" id="nEZ-Te-P95"/>
+                        <outlet property="infoLabel" destination="Rax-mk-mV9" id="DnB-8n-mzP"/>
+                        <outlet property="previewImage" destination="Wcu-8o-Dsn" id="KW7-tC-SQe"/>
+                        <outlet property="ratingLabel" destination="kVe-Vg-4zx" id="Kqd-o1-Zxp"/>
+                        <outlet property="titleLabel" destination="R7U-XO-xTw" id="54q-Go-Mwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4X-vv-0xM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="209"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="houseofcardsposter" width="620" height="458"/>
+        <image name="ratingsIcon" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,2 @@
+Magenta             : #FF006D
+Orange              : #FFA900
