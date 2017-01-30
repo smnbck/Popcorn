@@ -69,6 +69,13 @@
                                                                 <constraint firstAttribute="width" constant="274" id="Pea-Kq-4H8"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnailLive" translatesAutoresizingMaskIntoConstraints="NO" id="BpU-Oo-nuo">
+                                                            <rect key="frame" x="20" y="8" width="240" height="155"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="174" id="lRc-BH-G4k"/>
+                                                                <constraint firstAttribute="width" constant="274" id="yv7-v7-7Ff"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-BQ-L6c" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -83,12 +90,15 @@
                                                     <constraint firstItem="9cH-BQ-L6c" firstAttribute="leading" secondItem="QnL-GF-kTV" secondAttribute="leadingMargin" id="XKR-Mg-Meg"/>
                                                     <constraint firstAttribute="trailingMargin" secondItem="9cH-BQ-L6c" secondAttribute="trailing" id="YaT-8F-7Us"/>
                                                     <constraint firstItem="9cH-BQ-L6c" firstAttribute="bottom" secondItem="QnL-GF-kTV" secondAttribute="bottomMargin" id="ZWa-5E-yUZ"/>
+                                                    <constraint firstItem="BpU-Oo-nuo" firstAttribute="centerX" secondItem="5XG-T4-cMe" secondAttribute="centerX" id="bxd-1E-ka1"/>
                                                     <constraint firstItem="lu2-lm-yUM" firstAttribute="leading" secondItem="QnL-GF-kTV" secondAttribute="leading" id="dRZ-aX-ZHM"/>
+                                                    <constraint firstItem="BpU-Oo-nuo" firstAttribute="centerY" secondItem="5XG-T4-cMe" secondAttribute="centerY" id="dh7-Cr-lsR"/>
                                                     <constraint firstAttribute="trailing" secondItem="lu2-lm-yUM" secondAttribute="trailing" id="gQ2-cc-Bba"/>
                                                     <constraint firstItem="lu2-lm-yUM" firstAttribute="top" secondItem="QnL-GF-kTV" secondAttribute="top" id="pyN-8E-xag"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="lu2-lm-yUM" id="qKC-PN-ZC7"/>
+                                                    <outlet property="thumbnailExtraLabel" destination="BpU-Oo-nuo" id="jpX-Y7-y6O"/>
                                                     <outlet property="thumbnailLabel" destination="9cH-BQ-L6c" id="4Tg-kW-ibA"/>
                                                     <outlet property="thumbnailPreview" destination="5XG-T4-cMe" id="tyI-RH-dCV"/>
                                                 </connections>
@@ -152,6 +162,13 @@
                                                                 <constraint firstAttribute="height" constant="174" id="Nfm-7j-c8k"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnailLive" translatesAutoresizingMaskIntoConstraints="NO" id="9HT-8M-X4N">
+                                                            <rect key="frame" x="13" y="13" width="240" height="155"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="274" id="fOg-vK-FeY"/>
+                                                                <constraint firstAttribute="height" constant="174" id="j6B-JD-A6q"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-iW-KXu" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -180,12 +197,15 @@
                                                     <constraint firstItem="fiI-7V-EwL" firstAttribute="top" secondItem="yLY-6P-rHa" secondAttribute="top" id="B5R-Zg-xbC"/>
                                                     <constraint firstItem="aIx-oL-IC2" firstAttribute="centerY" secondItem="fiI-7V-EwL" secondAttribute="centerY" id="Ccu-Wk-fzt"/>
                                                     <constraint firstItem="fiI-7V-EwL" firstAttribute="leading" secondItem="yLY-6P-rHa" secondAttribute="leading" id="E1q-fX-rRS"/>
+                                                    <constraint firstItem="9HT-8M-X4N" firstAttribute="centerX" secondItem="aIx-oL-IC2" secondAttribute="centerX" id="Owd-61-tRk"/>
                                                     <constraint firstItem="aIx-oL-IC2" firstAttribute="centerX" secondItem="fiI-7V-EwL" secondAttribute="centerX" id="dWe-oZ-2GR"/>
                                                     <constraint firstItem="YqJ-iW-KXu" firstAttribute="bottom" secondItem="yLY-6P-rHa" secondAttribute="bottomMargin" id="daE-27-4ql"/>
+                                                    <constraint firstItem="9HT-8M-X4N" firstAttribute="centerY" secondItem="aIx-oL-IC2" secondAttribute="centerY" id="nDV-AF-CXS"/>
                                                     <constraint firstAttribute="trailing" secondItem="fiI-7V-EwL" secondAttribute="trailing" id="vWl-va-AlA"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="fiI-7V-EwL" id="FUK-vX-JOY"/>
+                                                    <outlet property="thumbnailExtraLabel" destination="9HT-8M-X4N" id="4M2-Q2-c9x"/>
                                                     <outlet property="thumbnailLabel" destination="YqJ-iW-KXu" id="eZo-M3-DxF"/>
                                                     <outlet property="thumbnailPreview" destination="aIx-oL-IC2" id="xEB-7h-E90"/>
                                                 </connections>
@@ -310,5 +330,6 @@
         <image name="smallPlatformIcon" width="40" height="48"/>
         <image name="smallSearchIcon" width="40" height="40"/>
         <image name="smallSurpriseIcon" width="40" height="40"/>
+        <image name="thumbnailLive" width="411" height="261"/>
     </resources>
 </document>

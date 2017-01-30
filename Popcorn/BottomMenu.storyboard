@@ -63,6 +63,13 @@
                                                                 <constraint firstAttribute="width" constant="274" id="LK7-ec-Bb3"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnailLive" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-iV-ihp">
+                                                            <rect key="frame" x="13" y="13" width="240" height="155"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="274" id="7kW-B8-dfq"/>
+                                                                <constraint firstAttribute="height" constant="174" id="EaI-A4-F3p"/>
+                                                            </constraints>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7C-4d-bJm" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -76,13 +83,16 @@
                                                     <constraint firstAttribute="trailingMargin" secondItem="l7C-4d-bJm" secondAttribute="trailing" id="8FO-IF-xVe"/>
                                                     <constraint firstItem="l7C-4d-bJm" firstAttribute="leading" secondItem="S5H-Yj-dwD" secondAttribute="leadingMargin" id="E2R-Jf-zpY"/>
                                                     <constraint firstItem="7pN-ut-9sP" firstAttribute="centerY" secondItem="jAp-xa-EnP" secondAttribute="centerY" id="mSZ-yE-4eq"/>
+                                                    <constraint firstItem="lAf-iV-ihp" firstAttribute="centerY" secondItem="7pN-ut-9sP" secondAttribute="centerY" id="pZs-Cv-R0q"/>
                                                     <constraint firstAttribute="trailing" secondItem="jAp-xa-EnP" secondAttribute="trailing" id="r8K-L4-z30"/>
                                                     <constraint firstItem="jAp-xa-EnP" firstAttribute="top" secondItem="S5H-Yj-dwD" secondAttribute="top" id="tx7-9Y-N0T"/>
                                                     <constraint firstItem="7pN-ut-9sP" firstAttribute="centerX" secondItem="jAp-xa-EnP" secondAttribute="centerX" id="usb-eA-ndZ"/>
                                                     <constraint firstItem="l7C-4d-bJm" firstAttribute="bottom" secondItem="S5H-Yj-dwD" secondAttribute="bottomMargin" id="xPm-JH-1qZ"/>
+                                                    <constraint firstItem="lAf-iV-ihp" firstAttribute="centerX" secondItem="7pN-ut-9sP" secondAttribute="centerX" id="z5g-Gc-aDs"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="jAp-xa-EnP" id="0Pk-Ga-VQm"/>
+                                                    <outlet property="thumbnailExtraLabel" destination="lAf-iV-ihp" id="mny-xy-A3k"/>
                                                     <outlet property="thumbnailLabel" destination="l7C-4d-bJm" id="gK7-u0-AGB"/>
                                                     <outlet property="thumbnailPreview" destination="7pN-ut-9sP" id="Yzb-w1-P0k"/>
                                                 </connections>
@@ -118,7 +128,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dni-Dc-uvg">
                                 <rect key="frame" x="70" y="199" width="1780" height="270"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseofcardsposter" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-Ho-zcX">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-Ho-zcX">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="360" id="Rbv-CW-KUE"/>
@@ -256,8 +266,8 @@ testfilm</string>
     </scenes>
     <resources>
         <image name="bigMoreIcon" width="50" height="50"/>
-        <image name="houseofcardsposter" width="620" height="458"/>
         <image name="ratingsIcon" width="36" height="36"/>
         <image name="smallMoreIcon" width="40" height="40"/>
+        <image name="thumbnailLive" width="411" height="261"/>
     </resources>
 </document>

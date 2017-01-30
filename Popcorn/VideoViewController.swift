@@ -42,6 +42,14 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let activeVideosArray = defaults.array(forKey: "activeVideos") as? [Int] {
+            ActiveVideos.sharedInstance.activeVideos = activeVideosArray
+        }
+        
+        if let activeStationsArray = defaults.array(forKey: "activeStations") as? [Int] {
+            ActiveStations.sharedInstance.activeStations = activeStationsArray
+        }
+        
         self.setupGestureRecognizers()
         self.setupTopMenuView()
         self.setupBottomMenuView()
@@ -55,6 +63,8 @@ class VideoViewController: UIViewController {
         } else {
             self.swipeToMenu()
         }
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

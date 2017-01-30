@@ -59,7 +59,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoprogress" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-Bl-cX0">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoprogress" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-Bl-cX0">
                                             <rect key="frame" x="70" y="131" width="1780" height="36"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-EL-Msv">

@@ -177,6 +177,9 @@ class BottomMenuViewController: MenuViewController, UICollectionViewDelegate, UI
             
             if self.similiarStreams[indexPath.row] is TVStationMovieStream || self.similiarStreams[indexPath.row] is TVStationSeriesStream {
                 thumbnailCell.thumbnailBackground.image = UIImage(named: "liveThumbnail")
+                thumbnailCell.thumbnailExtraLabel.isHidden = false
+            } else {
+                thumbnailCell.thumbnailExtraLabel.isHidden = true
             }
         }
         return cell

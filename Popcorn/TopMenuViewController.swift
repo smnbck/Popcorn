@@ -181,11 +181,12 @@ class TopMenuViewController: MenuViewController, UICollectionViewDataSource, UIC
                         thumbnailCell.thumbnailLabel.text = streamTitle //+ "(\(stream.tvStationName))"
                     }
                     thumbnailCell.thumbnailBackground.image = UIImage(named: "liveThumbnail")
-                    
+                    thumbnailCell.thumbnailExtraLabel.isHidden = false
                 } else {
                     thumbnailCell.thumbnailBackground.image = UIImage(named: "videoThumbnail")
                     let streamTitle = resumeStreams[indexPath.row].title
                     thumbnailCell.thumbnailLabel.text = streamTitle
+                    thumbnailCell.thumbnailExtraLabel.isHidden = true
                 }
                 
                 if let streamImage = UIImage(named: resumeStreams[indexPath.row].thumbnailImageString) {
@@ -202,11 +203,12 @@ class TopMenuViewController: MenuViewController, UICollectionViewDataSource, UIC
                         thumbnailCell.thumbnailLabel.text = streamTitle
                     }
                     thumbnailCell.thumbnailBackground.image = UIImage(named: "liveThumbnail")
-                    
+                    thumbnailCell.thumbnailExtraLabel.isHidden = false
                 } else {
                     thumbnailCell.thumbnailBackground.image = UIImage(named: "videoThumbnail")
                     let streamTitle = suggestionsStreams[indexPath.row].title
                     thumbnailCell.thumbnailLabel.text = streamTitle
+                    thumbnailCell.thumbnailExtraLabel.isHidden = true
                 }
                 
                 if let streamImage = UIImage(named: suggestionsStreams[indexPath.row].thumbnailImageString) {
@@ -218,6 +220,9 @@ class TopMenuViewController: MenuViewController, UICollectionViewDataSource, UIC
             
             thumbnailCell.thumbnailPreview.adjustsImageWhenAncestorFocused = true
             thumbnailCell.thumbnailPreview.clipsToBounds = false
+            
+            thumbnailCell.thumbnailExtraLabel.adjustsImageWhenAncestorFocused = true
+            thumbnailCell.thumbnailExtraLabel.clipsToBounds = false
             
             thumbnailCell.thumbnailLabel.textColor = UIColor.white
             
