@@ -31,6 +31,12 @@ class MenuViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.removeMenuViewController), userInfo: nil, repeats: false)
     }
     
+    func prepareForRemovingWithID(mediaID: Int) {
+        self.videoViewController?.hideMenus()
+        self.videoViewController?.startVideo(withID: mediaID)
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.removeMenuViewController), userInfo: nil, repeats: false)
+    }
+    
     @objc private func removeMenuViewController() {
         self.willMove(toParentViewController: nil)
         self.view.removeFromSuperview()

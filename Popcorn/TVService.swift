@@ -9,11 +9,11 @@
 import Foundation
 
 class TVService: Service {
-    var numberOfStations: Int
+    var stationsIDs: [Int]
     var numberOfVideos: Int
     
-    init(name: String, logoName: String, needsSignup: Bool, numberOfStations: Int, numberOfVideos: Int) {
-        self.numberOfStations = numberOfStations
+    init(name: String, logoName: String, needsSignup: Bool, stationIDs: [Int], numberOfVideos: Int) {
+        self.stationsIDs = stationIDs
         self.numberOfVideos = numberOfVideos
         super.init(name: name, logoName: logoName, needsSignup: needsSignup)
     }

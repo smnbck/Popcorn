@@ -12,9 +12,9 @@ class SeriesStream: MediaStream {
     
     var seasons: [Season]
     
-    init(title: String, thumbnailImageString: String, playerImageString: String, description: String, duration: Double, seasons: [Season], genre: String?, usk: String?, rating: String?) {
-        super.init(title: title, thumbnailImageString: thumbnailImageString, playerImageString: playerImageString, description: description, genre: genre, usk: usk, rating: rating)
-        
+    init(id: Int, title: String, description: String, seasons: [Season], genre: String?, usk: String?, rating: String?) {
         self.seasons = seasons
+        
+        super.init(id: id, title: title, description: description, genre: genre, usk: usk, rating: rating)
     }
 }

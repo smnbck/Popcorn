@@ -1,2 +1,3 @@
-Magenta             : #FF006D
+Magenta             : #ff3566
+DarkMagenta         : #b1405b
 Orange              : #FFA900

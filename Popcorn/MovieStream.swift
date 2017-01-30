@@ -12,9 +12,9 @@ class MovieStream: MediaStream {
     
     var duration: Double
     
-    init(title: String, thumbnailImageString: String, playerImageString: String, description: String, duration: Double) {
-        super.init(title: title, thumbnailImageString: thumbnailImageString, playerImageString: playerImageString, description: description, genre: genre, usk: usk, rating: rating)
-        
+    init(id: Int, title: String, description: String, duration: Double, genre: String?, usk: String?, rating: String?) {
         self.duration = duration
+        super.init(id: id, title: title, description: description, genre: genre, usk: usk, rating: rating)
+        
     }
 }

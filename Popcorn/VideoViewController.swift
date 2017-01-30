@@ -19,12 +19,24 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var bottomMenuViewConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var toMenuLabel: UILabel!
+//    @IBOutlet weak var blackView: UIView!
+    
+    @IBOutlet weak var dummyBackground: UIImageView!
+    @IBOutlet weak var progressBar: UIImageView!
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: - Stored Properties
     var topMenuGestureRecognizer: UISwipeGestureRecognizer?
     var bottomMenuGestureRecognizer: UISwipeGestureRecognizer?
     var fadeOutTimer: Timer? = Timer()
     var menuIsActive = false
+    var currentMediaStream: MediaStream? = nil
+    var passedSeason: String?
+    var passedEpisode: String?
+    var dummyBGID = 1
+    var startedVideoIDs: [Int] = []
     
     // MARK: - Class Functions
     override func viewDidLoad() {
@@ -35,11 +47,19 @@ class VideoViewController: UIViewController {
         self.setupBottomMenuView()
         self.fadeInOverlay()
         
+//        blackView.alpha = 0
+        self.titleLabel.alpha = 0
         
+        if let lastMediaID = defaults.object(forKey: "lastMediaID") as? Int {
+            startVideo(withID: lastMediaID)
+        } else {
+            self.swipeToMenu()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
+        
     }
     
     func setupGestureRecognizers() {
@@ -96,6 +116,7 @@ class VideoViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self.topMenuView.alpha = 0
                 self.bottomMenuView.alpha = 0
+//                self.blackView.alpha = 0
             })
         }
     }
@@ -109,12 +130,21 @@ class VideoViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
+//            self.blackView.alpha = 0.5
         })
     }
     
     func loadTopMenuViewController() {
         if let topMenuViewController = StoryboardScene.TopMenu.topMenuScene.viewController() as? TopMenuViewController {
             topMenuViewController.videoViewController = self
+            topMenuViewController.startedVideoIDs = self.startedVideoIDs
+            
+            if currentMediaStream == nil {
+            topMenuViewController.currentlyRunning = ""
+            } else {
+                topMenuViewController.currentlyRunning = "Du schaust gerade \(self.currentMediaStream!.title)"
+            }
+            
             self.addChildViewController(topMenuViewController)
             topMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.topMenuView.frame.size.width, height: self.topMenuView.frame.size.height)
             self.topMenuView.addSubview(topMenuViewController.view)
@@ -127,21 +157,27 @@ class VideoViewController: UIViewController {
     }
     
     func swipeTobottomMenu() {
-        self.prepareForSwipe()
-        self.bottomMenuViewConstraint.constant = 0
-        self.topMenuViewConstraint.constant = -1080
-        
-        self.loadBottomMenuViewController()
-        
-        UIView.animate(withDuration: 0.5) {
+        if self.currentMediaStream != nil {
+            self.prepareForSwipe()
+            self.bottomMenuViewConstraint.constant = 0
+            self.topMenuViewConstraint.constant = -1080
             
-            self.view.layoutIfNeeded()
+            self.loadBottomMenuViewController()
+            
+            UIView.animate(withDuration: 0.5) {
+                self.view.layoutIfNeeded()
+//                self.blackView.alpha = 0.5
+            }
         }
     }
     
     func loadBottomMenuViewController() {
         if let bottomMenuViewController = StoryboardScene.BottomMenu.bottomMenuScene.viewController() as? BottomMenuViewController {
             bottomMenuViewController.videoViewController = self
+            bottomMenuViewController.mediaStream = self.currentMediaStream
+            bottomMenuViewController.passedEpisode = self.passedEpisode
+            bottomMenuViewController.passedSeason = self.passedSeason
+            
             self.addChildViewController(bottomMenuViewController)
             bottomMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.bottomMenuView.frame.size.width, height: self.bottomMenuView.frame.size.height)
             self.bottomMenuView.addSubview(bottomMenuViewController.view)
@@ -167,6 +203,7 @@ class VideoViewController: UIViewController {
             self.toMenuLabel.alpha = 1
             self.topMenuView.alpha = 1
             self.bottomMenuView.alpha = 1
+//            self.blackView.alpha = 0
             self.view.layoutIfNeeded()
         }) { _ in
             self.menuIsActive = false
@@ -174,5 +211,50 @@ class VideoViewController: UIViewController {
             self.fadeOutTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.fadeOutOverlay), userInfo: nil, repeats: false)
             self.setupGestureRecognizers()
         }
+    }
+    
+    func startVideo(withID: Int) {
+        defaults.set(withID, forKey: "lastMediaID")
+        let mediaArray = MediaStreamsArray().array
+        let mediaStream = mediaArray[withID-1]
+        if self.currentMediaStream?.id != mediaStream.id {
+            self.currentMediaStream = mediaStream
+            if mediaStream is TVStationMovieStream || mediaStream is TVStationSeriesStream {
+                self.progressBar.image = UIImage(named: "liveprogress")
+            } else {
+                self.progressBar.image = UIImage(named: "videoprogress")
+            }
+            self.titleLabel.text = "\(self.currentMediaStream!.title) wird abgespielt"
+            
+            if !self.startedVideoIDs.contains(withID) {
+                self.startedVideoIDs.append(withID)
+            }
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.dummyBackground.alpha = 0
+                self.titleLabel.alpha = 1
+            }) { (_) in
+                
+                
+                self.dummyBackground.image = UIImage(named: "dummy\(self.dummyBGID)")
+                self.dummyBGID += 1
+                if self.dummyBGID > 4 {
+                    self.dummyBGID = 1
+                }
+                
+                
+                
+                UIView.animate(withDuration: 1.2, animations: {
+                    self.titleLabel.alpha = 0.99
+                    
+                }, completion: { (_) in
+                    UIView.animate(withDuration: 0.4, animations: {
+                        self.titleLabel.alpha = 0
+                        self.dummyBackground.alpha = 1
+                    })
+                })
+            }
+        }
+        
     }
 }

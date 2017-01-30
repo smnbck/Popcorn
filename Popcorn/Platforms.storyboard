@@ -92,15 +92,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXz-y1-voV">
-                                <rect key="frame" x="863" y="974" width="195" height="86"/>
+                                <rect key="frame" x="615" y="974" width="690" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="46V-ui-m8q"/>
-                                    <constraint firstAttribute="width" constant="195" id="bEh-h5-die"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Fertig"/>
+                                <state key="normal" title="Wähle mindestens eine Videoplattform"/>
                                 <state key="highlighted">
                                     <color key="titleColor" red="0.81858740482233505" green="0.51771883723397227" blue="0.0063187930990706966" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -136,7 +135,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7tv" width="659" height="374"/>
+        <image name="7tv" width="659" height="247"/>
         <image name="addIcon" width="60" height="60"/>
         <image name="logo" width="1116" height="253"/>
     </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -63,7 +63,7 @@
                                                                 <constraint firstAttribute="width" constant="274" id="LK7-ec-Bb3"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7C-4d-bJm">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7C-4d-bJm" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,7 +83,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="jAp-xa-EnP" id="0Pk-Ga-VQm"/>
-                                                    <outlet property="thumbnailLabel" destination="l7C-4d-bJm" id="2bY-aK-fAx"/>
+                                                    <outlet property="thumbnailLabel" destination="l7C-4d-bJm" id="gK7-u0-AGB"/>
                                                     <outlet property="thumbnailPreview" destination="7pN-ut-9sP" id="Yzb-w1-P0k"/>
                                                 </connections>
                                             </collectionViewCell>
@@ -103,9 +103,6 @@
                                     <constraint firstAttribute="bottom" secondItem="TbS-jZ-a3n" secondAttribute="bottom" id="ibN-bP-eaw"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoprogress" translatesAutoresizingMaskIntoConstraints="NO" id="abc-y2-vWS">
-                                <rect key="frame" x="70" y="131" width="1780" height="36"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTl-7t-LKb">
                                 <rect key="frame" x="70" y="94" width="60" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -140,9 +137,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIm-ju-1zF">
-                                        <rect key="frame" x="382" y="114" width="1398" height="115"/>
+                                        <rect key="frame" x="382" y="114" width="1398" height="108"/>
                                         <string key="text">Weil der frisch gewählte US-Präsident Walker ihm das fest versprochene Amt des Außenministers verwehrt hat, plant der machtbesessene Kongressabgeordnete Francis Underwood eine Intrige gegen die Regierung.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -211,22 +208,27 @@
                                     <action selector="moreButtonPressed:" destination="1as-sd-kfn" eventType="primaryActionTriggered" id="MsJ-X8-mju"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-9z-jW6">
+                                <rect key="frame" x="1597" y="537" width="233" height="86"/>
+                                <string key="text">Um 22:15 folgt
+testfilm</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="abc-y2-vWS" firstAttribute="top" secondItem="HDc-os-6aH" secondAttribute="bottom" constant="8" id="2yj-Kf-taN"/>
-                            <constraint firstItem="abc-y2-vWS" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" constant="70" id="3mU-VR-tfo"/>
                             <constraint firstItem="IHK-O1-uBv" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" id="C8H-lu-0ZZ"/>
                             <constraint firstItem="AV3-7Y-mH4" firstAttribute="centerX" secondItem="fdT-id-bh4" secondAttribute="centerX" constant="-705" id="DMK-BQ-qbj"/>
                             <constraint firstItem="HDc-os-6aH" firstAttribute="top" secondItem="SdU-op-KNt" secondAttribute="bottom" constant="94" id="EEC-Mh-3WU"/>
                             <constraint firstItem="qTl-7t-LKb" firstAttribute="top" secondItem="SdU-op-KNt" secondAttribute="bottom" constant="94" id="KqR-QC-JqF"/>
-                            <constraint firstAttribute="trailing" secondItem="abc-y2-vWS" secondAttribute="trailing" constant="70" id="Njq-rt-YUe"/>
+                            <constraint firstItem="dni-Dc-uvg" firstAttribute="top" secondItem="HDc-os-6aH" secondAttribute="bottom" constant="76" id="MiE-DM-Llc"/>
                             <constraint firstItem="AV3-7Y-mH4" firstAttribute="centerY" secondItem="fdT-id-bh4" secondAttribute="centerY" constant="40" id="OQC-FA-icx"/>
-                            <constraint firstItem="abc-y2-vWS" firstAttribute="top" secondItem="qTl-7t-LKb" secondAttribute="bottom" constant="8" id="Q3r-57-JlR"/>
-                            <constraint firstItem="dni-Dc-uvg" firstAttribute="top" secondItem="abc-y2-vWS" secondAttribute="bottom" constant="32" id="fAa-pa-l8S"/>
                             <constraint firstItem="dni-Dc-uvg" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" constant="70" id="h1I-dT-0k3"/>
+                            <constraint firstItem="dmv-9z-jW6" firstAttribute="centerY" secondItem="AV3-7Y-mH4" secondAttribute="centerY" id="lKe-t5-wan"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dmv-9z-jW6" secondAttribute="trailing" constant="70" id="m6v-bc-Fkp"/>
                             <constraint firstAttribute="trailing" secondItem="HDc-os-6aH" secondAttribute="trailing" constant="70" id="n9m-KU-3Cz"/>
                             <constraint firstItem="qTl-7t-LKb" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" constant="70" id="t0y-yc-Dr8"/>
-                            <constraint firstItem="abc-y2-vWS" firstAttribute="top" secondItem="HDc-os-6aH" secondAttribute="bottom" constant="8" id="uhd-Y9-Kv6"/>
                             <constraint firstAttribute="trailing" secondItem="dni-Dc-uvg" secondAttribute="trailing" constant="70" id="wy0-fM-RU3"/>
                             <constraint firstAttribute="trailing" secondItem="IHK-O1-uBv" secondAttribute="trailing" id="xEE-3X-3gW"/>
                             <constraint firstItem="t9U-4r-DPF" firstAttribute="top" secondItem="IHK-O1-uBv" secondAttribute="bottom" constant="40" id="zfU-1U-AYD"/>
@@ -237,9 +239,11 @@
                     <connections>
                         <outlet property="collectionView" destination="TbS-jZ-a3n" id="2Hf-UN-z9h"/>
                         <outlet property="descriptionLabel" destination="uIm-ju-1zF" id="RWQ-TR-nPr"/>
+                        <outlet property="imdbLabel" destination="si1-SO-nwr" id="A67-y2-2Fd"/>
                         <outlet property="infoLabel" destination="y1R-ue-4hx" id="ceO-qp-uvb"/>
                         <outlet property="moreButton" destination="AV3-7Y-mH4" id="T30-7D-C3h"/>
-                        <outlet property="progressBar" destination="abc-y2-vWS" id="auR-uj-VzW"/>
+                        <outlet property="nextShowLabel" destination="dmv-9z-jW6" id="lvG-eY-s8k"/>
+                        <outlet property="ratingsIcon" destination="sLc-o9-nBZ" id="KJ1-TF-vzi"/>
                         <outlet property="scoreLabel" destination="0pk-G4-3Rj" id="T3K-GV-SoE"/>
                         <outlet property="thumbnail" destination="Cxg-Ho-zcX" id="GdF-ht-A3I"/>
                         <outlet property="titleLabel" destination="BBA-ru-sms" id="oUy-lL-v6h"/>
@@ -255,6 +259,5 @@
         <image name="houseofcardsposter" width="620" height="458"/>
         <image name="ratingsIcon" width="36" height="36"/>
         <image name="smallMoreIcon" width="40" height="40"/>
-        <image name="videoprogress" width="1780" height="36"/>
     </resources>
 </document>

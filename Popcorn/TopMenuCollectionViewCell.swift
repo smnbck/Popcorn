@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class TopMenuCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbnailBackground: UIImageView!
     @IBOutlet weak var thumbnailPreview: UIImageView!
-    @IBOutlet weak var thumbnailLabel: UILabel!
+//    @IBOutlet weak var thumbnailLabel: UILabel!
+    
+    @IBOutlet weak var thumbnailLabel: MarqueeLabel!
     
 }

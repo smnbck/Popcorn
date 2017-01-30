@@ -9,12 +9,12 @@
 import Foundation
 
 class VideoService: Service {
-    var numberOfMovies: Int
-    var numberOfSeries: Int
+    var movieIDs: [Int]
+    var seriesIDs: [Int]
     
-    init(name: String, logoName: String, needsSignup: Bool, numberOfMovies: Int, numberOfSeries: Int) {
-        self.numberOfSeries = numberOfSeries
-        self.numberOfMovies = numberOfMovies
+    init(name: String, logoName: String, needsSignup: Bool, movieIDs: [Int], seriesIDs: [Int]) {
+        self.movieIDs = movieIDs
+        self.seriesIDs = seriesIDs
         super.init(name: name, logoName: logoName, needsSignup: needsSignup)
     }
 }

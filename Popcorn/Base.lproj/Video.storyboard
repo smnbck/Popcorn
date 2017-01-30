@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -21,9 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummybackground" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-nf-0Pj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientbg" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-nf-0Pj">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-53-XrK">
+                                <rect key="frame" x="907" y="513" width="106" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUd-PV-kpN">
                                 <rect key="frame" x="0.0" y="-900" width="1920" height="1080"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rZc-B2-f1E">
@@ -98,11 +104,16 @@
                             <constraint firstItem="JYp-nf-0Pj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZEq-8B-VmO"/>
                             <constraint firstItem="JYp-nf-0Pj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bSB-z3-2gA"/>
                             <constraint firstItem="UUd-PV-kpN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-900" id="gk0-th-pFi"/>
+                            <constraint firstItem="zgK-53-XrK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wf9-lG-RXO"/>
+                            <constraint firstItem="zgK-53-XrK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zof-2E-060"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomMenuView" destination="Rem-YJ-qnR" id="7ml-ti-LYl"/>
                         <outlet property="bottomMenuViewConstraint" destination="IKo-Gr-dRN" id="zQm-EJ-G9r"/>
+                        <outlet property="dummyBackground" destination="JYp-nf-0Pj" id="gVR-k6-UdE"/>
+                        <outlet property="progressBar" destination="8wC-Bl-cX0" id="Eh3-LQ-RKm"/>
+                        <outlet property="titleLabel" destination="zgK-53-XrK" id="ZyY-Uj-mpA"/>
                         <outlet property="toMenuLabel" destination="CM1-pO-dTJ" id="Pdx-or-up6"/>
                         <outlet property="topMenuView" destination="UUd-PV-kpN" id="v0L-j2-cYF"/>
                         <outlet property="topMenuViewConstraint" destination="gk0-th-pFi" id="zrd-i8-ceW"/>
@@ -113,7 +124,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dummybackground" width="960" height="540"/>
+        <image name="gradientbg" width="1920" height="1080"/>
         <image name="videoprogress" width="1780" height="36"/>
     </resources>
 </document>

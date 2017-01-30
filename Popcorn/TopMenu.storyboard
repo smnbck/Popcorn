@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -25,6 +25,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GE-Q0-RRG">
                                 <rect key="frame" x="0.0" y="123" width="1920" height="360"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Du hast keine Serien oder Filme angefangen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X7-f5-1t3">
+                                        <rect key="frame" x="612" y="179" width="696" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weiterschauen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78N-Vn-SN9">
                                         <rect key="frame" x="70" y="0.0" width="342" height="55"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
@@ -63,7 +69,7 @@
                                                                 <constraint firstAttribute="width" constant="274" id="Pea-Kq-4H8"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-BQ-L6c">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-BQ-L6c" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,7 +89,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="lu2-lm-yUM" id="qKC-PN-ZC7"/>
-                                                    <outlet property="thumbnailLabel" destination="9cH-BQ-L6c" id="lct-RC-Wxo"/>
+                                                    <outlet property="thumbnailLabel" destination="9cH-BQ-L6c" id="4Tg-kW-ibA"/>
                                                     <outlet property="thumbnailPreview" destination="5XG-T4-cMe" id="tyI-RH-dCV"/>
                                                 </connections>
                                             </collectionViewCell>
@@ -96,6 +102,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="78N-Vn-SN9" firstAttribute="leading" secondItem="7GE-Q0-RRG" secondAttribute="leading" constant="70" id="AnM-EC-MR0"/>
+                                    <constraint firstItem="9X7-f5-1t3" firstAttribute="centerY" secondItem="7GE-Q0-RRG" secondAttribute="centerY" constant="20" id="EUI-Tm-ZqL"/>
+                                    <constraint firstItem="9X7-f5-1t3" firstAttribute="centerX" secondItem="7GE-Q0-RRG" secondAttribute="centerX" id="JjM-Nj-flf"/>
                                     <constraint firstItem="78N-Vn-SN9" firstAttribute="top" secondItem="7GE-Q0-RRG" secondAttribute="top" id="V8Y-WN-P0B"/>
                                     <constraint firstAttribute="height" constant="360" id="hiF-F8-Pfb"/>
                                     <constraint firstItem="KpR-BI-iHK" firstAttribute="leading" secondItem="7GE-Q0-RRG" secondAttribute="leading" id="mWv-ui-v6X"/>
@@ -106,8 +114,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYo-Y3-S0e">
                                 <rect key="frame" x="0.0" y="538" width="1920" height="360"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Das gefällt dir auch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soh-0J-2ZU">
-                                        <rect key="frame" x="70" y="0.0" width="431" height="55"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Das gefällt dir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soh-0J-2ZU">
+                                        <rect key="frame" x="70" y="0.0" width="310" height="55"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -144,11 +152,25 @@
                                                                 <constraint firstAttribute="height" constant="174" id="Nfm-7j-c8k"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-iW-KXu">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqJ-iW-KXu" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="8" y="217" width="264" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="scrollDuration">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="scrollRate">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                                                    <real key="value" value="60"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                                                    <real key="value" value="18"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
                                                 </view>
@@ -164,7 +186,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="thumbnailBackground" destination="fiI-7V-EwL" id="FUK-vX-JOY"/>
-                                                    <outlet property="thumbnailLabel" destination="YqJ-iW-KXu" id="dgt-VZ-WFX"/>
+                                                    <outlet property="thumbnailLabel" destination="YqJ-iW-KXu" id="eZo-M3-DxF"/>
                                                     <outlet property="thumbnailPreview" destination="aIx-oL-IC2" id="xEB-7h-E90"/>
                                                 </connections>
                                             </collectionViewCell>
@@ -221,19 +243,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-3Q-hL0">
-                                <rect key="frame" x="76" y="27" width="440" height="66"/>
+                                <rect key="frame" x="70" y="27" width="302" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="ibn-cE-4TK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <size key="titleShadowOffset" width="0.0" height="2"/>
-                                <state key="normal" title=" Mediathek durchstöbern" image="smallMediaLibraryIcon">
+                                <state key="normal" title=" Überrasch mich" image="smallSurpriseIcon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="bigMediaLibraryIcon">
+                                <state key="highlighted" image="bigSurpriseIcon">
                                     <color key="titleColor" red="1" green="0.63124972749999997" blue="0.0" alpha="0.69956656678082196" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <state key="focused" image="bigMediaLibraryIcon">
+                                <state key="focused" image="bigSurpriseIcon">
                                     <color key="titleColor" red="1" green="0.63124972749999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -241,15 +263,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerade läuft Avengers: Age of Ultron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-Ir-12c">
-                                <rect key="frame" x="671" y="933" width="579" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <rect key="frame" x="702" y="937" width="516" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="vcR-TL-cej" firstAttribute="top" secondItem="mrp-Ir-12c" secondAttribute="bottom" constant="104" id="88X-D9-SE9"/>
-                            <constraint firstItem="Uck-3Q-hL0" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" constant="-664" id="ADZ-HQ-tKp"/>
+                            <constraint firstItem="Uck-3Q-hL0" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" constant="-739" id="ADZ-HQ-tKp"/>
                             <constraint firstItem="Uck-3Q-hL0" firstAttribute="centerY" secondItem="qZ1-5l-Hjq" secondAttribute="centerY" constant="-480" id="BB1-v3-gj4"/>
                             <constraint firstItem="SNc-ar-Rrf" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" constant="640" id="IRZ-2H-kqN"/>
                             <constraint firstItem="mrp-Ir-12c" firstAttribute="centerX" secondItem="qZ1-5l-Hjq" secondAttribute="centerX" id="IZq-lF-Azb"/>
@@ -270,6 +292,7 @@
                         <outlet property="mediaLibraryButton" destination="Uck-3Q-hL0" id="vOA-ET-dUC"/>
                         <outlet property="platformButton" destination="SNc-ar-Rrf" id="fmQ-Sa-LyM"/>
                         <outlet property="resumeCollectionView" destination="KpR-BI-iHK" id="9ZW-cz-u5j"/>
+                        <outlet property="resumeLabel" destination="9X7-f5-1t3" id="3gl-0k-13n"/>
                         <outlet property="searchButton" destination="haQ-ny-aeY" id="1Xg-UO-7bR"/>
                         <outlet property="suggestionCollectionView" destination="jvE-1x-jel" id="cA6-d5-sUE"/>
                         <outlet property="watchLabel" destination="mrp-Ir-12c" id="Z7w-Le-qnT"/>
@@ -281,11 +304,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bigMediaLibraryIcon" width="52" height="49"/>
         <image name="bigPlatformsIcon" width="50" height="48"/>
         <image name="bigSearchIcon" width="50" height="50"/>
-        <image name="smallMediaLibraryIcon" width="42" height="40"/>
+        <image name="bigSurpriseIcon" width="50" height="50"/>
         <image name="smallPlatformIcon" width="40" height="48"/>
         <image name="smallSearchIcon" width="40" height="40"/>
+        <image name="smallSurpriseIcon" width="40" height="40"/>
     </resources>
 </document>

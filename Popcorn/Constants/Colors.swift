@@ -24,8 +24,11 @@ extension Color {
 
 // swiftlint:disable type_body_length
 enum ColorName {
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff006d"></span>
-  /// Alpha: 100% <br/> (0xff006dff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#b1405b"></span>
+  /// Alpha: 100% <br/> (0xb1405bff)
+  case darkMagenta
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff3566"></span>
+  /// Alpha: 100% <br/> (0xff3566ff)
   case magenta
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa900"></span>
   /// Alpha: 100% <br/> (0xffa900ff)
@@ -33,7 +36,8 @@ enum ColorName {
 
   var rgbaValue: UInt32 {
     switch self {
-    case .magenta: return 0xff006dff
+    case .darkMagenta: return 0xb1405bff
+    case .magenta: return 0xff3566ff
     case .orange: return 0xffa900ff
     }
   }

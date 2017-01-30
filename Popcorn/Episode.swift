@@ -9,15 +9,15 @@
 import Foundation
 
 class Episode {
+    var episodeId: Int
     var title: String
     var duration: Double
     var description: String
-    var episodeThumbnail: String
     
-    init(title: String, duration: Double, description: String, episodeThumbnail: String) {
+    init(episodeId: Int, title: String, duration: Double, description: String) {
+        self.episodeId = episodeId
         self.title = title
         self.duration = duration
         self.description = description
-        self.episodeThumbnail = episodeThumbnail
     }
 }

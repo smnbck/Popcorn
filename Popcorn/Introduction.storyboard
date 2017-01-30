@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -21,57 +21,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="K6a-Xd-cM9">
-                                <rect key="frame" x="686" y="22" width="185" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="K6a-Xd-cM9">
+                                <rect key="frame" x="661" y="20" width="150" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="RYj-Kc-BAv"/>
+                                    <constraint firstAttribute="width" constant="150" id="RYj-Kc-BAv"/>
                                     <constraint firstAttribute="height" constant="128" id="rRG-Ko-NeK"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amazoninstantvideo" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-ZZ-cKi">
-                                <rect key="frame" x="70" y="8" width="240" height="128"/>
+                                <rect key="frame" x="70" y="22" width="200" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="VkS-ai-jlO"/>
+                                    <constraint firstAttribute="width" constant="200" id="VkS-ai-jlO"/>
                                     <constraint firstAttribute="height" constant="128" id="dMY-ZZ-YqP"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zdf" translatesAutoresizingMaskIntoConstraints="NO" id="csW-DM-fy3">
-                                <rect key="frame" x="1184" y="20" width="172" height="128"/>
+                                <rect key="frame" x="1181" y="20" width="140" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="DeI-W6-ody"/>
-                                    <constraint firstAttribute="width" constant="172" id="rlo-jQ-aGk"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7tv" translatesAutoresizingMaskIntoConstraints="NO" id="CTS-P6-Lt7">
-                                <rect key="frame" x="1411" y="20" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="UuD-E6-Uom"/>
-                                    <constraint firstAttribute="height" constant="128" id="te9-mr-nfv"/>
+                                    <constraint firstAttribute="width" constant="140" id="rlo-jQ-aGk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tvnow" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-9z-ceW">
-                                <rect key="frame" x="1588" y="20" width="262" height="128"/>
+                                <rect key="frame" x="1630" y="20" width="220" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="TMh-e2-Tgq"/>
-                                    <constraint firstAttribute="width" constant="262" id="chJ-W8-Zew"/>
+                                    <constraint firstAttribute="width" constant="220" id="chJ-W8-Zew"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ardbig" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-9l-Pdt">
-                                <rect key="frame" x="934" y="20" width="192" height="128"/>
+                                <rect key="frame" x="914" y="20" width="150" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="ZG1-gi-jbT"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZG1-gi-jbT"/>
                                     <constraint firstAttribute="height" constant="128" id="sH3-df-4xk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="goP-II-mbm">
-                                <rect key="frame" x="560" y="308" width="800" height="160"/>
+                                <rect key="frame" x="560" y="318" width="800" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="cXs-lF-Dub"/>
                                     <constraint firstAttribute="width" constant="800" id="zmC-oV-8AN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkS-Ez-uhC">
-                                <rect key="frame" x="260" y="568" width="1400" height="165"/>
+                                <rect key="frame" x="260" y="578" width="1400" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1400" id="ZYi-c4-Fcn"/>
                                     <constraint firstAttribute="height" constant="165" id="dMj-17-bZj"/>
@@ -82,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dabei hast du natürlich auch Zugriff auf dutzende TV Sender und deren Eigenproduktionen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="god-eC-LgL">
-                                <rect key="frame" x="1920" y="568" width="1400" height="165"/>
+                                <rect key="frame" x="1920" y="578" width="1400" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="AKC-47-gGr"/>
                                     <constraint firstAttribute="width" constant="1400" id="db2-VS-3n0"/>
@@ -91,8 +84,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Um loszulegen musst du dich nur noch bei den Plattformen anmelden die du nutzen möchtest." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os5-hx-KvZ">
-                                <rect key="frame" x="3540" y="568" width="1400" height="165"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Um loszulegen musst du dich nur noch bei den Plattformen anmelden die du nutzen möchtest." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os5-hx-KvZ">
+                                <rect key="frame" x="3580" y="578" width="1400" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1400" id="J9Y-LJ-FCs"/>
                                     <constraint firstAttribute="height" constant="165" id="vcI-GR-Ydp"/>
@@ -122,39 +115,46 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maxdomebig" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-4F-P7D">
-                                <rect key="frame" x="372" y="20" width="252" height="128"/>
+                                <rect key="frame" x="349" y="20" width="210" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="252" id="hSU-mo-Y0p"/>
+                                    <constraint firstAttribute="width" constant="210" id="hSU-mo-Y0p"/>
                                     <constraint firstAttribute="height" constant="128" id="lfa-Zg-aYx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7tv" translatesAutoresizingMaskIntoConstraints="NO" id="CTS-P6-Lt7">
+                                <rect key="frame" x="1431" y="22" width="110" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="UuD-E6-Uom"/>
+                                    <constraint firstAttribute="height" constant="128" id="te9-mr-nfv"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Os5-hx-KvZ" firstAttribute="top" secondItem="XkS-Ez-uhC" secondAttribute="top" id="0bF-z5-HmE"/>
-                            <constraint firstItem="CTS-P6-Lt7" firstAttribute="leading" secondItem="csW-DM-fy3" secondAttribute="trailing" constant="55" id="2WV-lZ-pIR"/>
-                            <constraint firstItem="csW-DM-fy3" firstAttribute="leading" secondItem="Pga-9l-Pdt" secondAttribute="trailing" constant="58" id="5w4-uv-5Sv"/>
                             <constraint firstItem="R0Q-Tf-IUo" firstAttribute="top" secondItem="spn-cB-EU1" secondAttribute="bottom" constant="125" id="7Cm-2C-lzF"/>
+                            <constraint firstItem="wQb-9z-ceW" firstAttribute="leading" secondItem="CTS-P6-Lt7" secondAttribute="trailing" constant="89" id="8dD-lp-U16"/>
+                            <constraint firstItem="CTS-P6-Lt7" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="22" id="8dE-oc-e9o"/>
+                            <constraint firstItem="CTS-P6-Lt7" firstAttribute="leading" secondItem="csW-DM-fy3" secondAttribute="trailing" constant="110" id="D9p-ej-ldD"/>
                             <constraint firstItem="K6a-Xd-cM9" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="22" id="DRS-aY-gyE"/>
+                            <constraint firstItem="csW-DM-fy3" firstAttribute="leading" secondItem="Pga-9l-Pdt" secondAttribute="trailing" constant="117" id="HeD-DZ-toS"/>
                             <constraint firstItem="csW-DM-fy3" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="20" id="JAw-Cg-ZO2"/>
-                            <constraint firstItem="goP-II-mbm" firstAttribute="top" secondItem="Pga-9l-Pdt" secondAttribute="bottom" constant="160" id="JYt-UW-M9c"/>
-                            <constraint firstItem="wQb-9z-ceW" firstAttribute="leading" secondItem="CTS-P6-Lt7" secondAttribute="trailing" constant="49" id="LGc-ky-EAq"/>
+                            <constraint firstItem="goP-II-mbm" firstAttribute="top" secondItem="Pga-9l-Pdt" secondAttribute="bottom" constant="170" id="JYt-UW-M9c"/>
                             <constraint firstItem="god-eC-LgL" firstAttribute="top" secondItem="XkS-Ez-uhC" secondAttribute="top" id="Q46-iS-dXf"/>
                             <constraint firstItem="spn-cB-EU1" firstAttribute="centerX" secondItem="cU0-G7-Iak" secondAttribute="centerX" id="S3f-a9-1Ew"/>
                             <constraint firstAttribute="trailing" secondItem="wQb-9z-ceW" secondAttribute="trailing" constant="70" id="UhA-F4-vLl"/>
-                            <constraint firstItem="Pga-9l-Pdt" firstAttribute="leading" secondItem="K6a-Xd-cM9" secondAttribute="trailing" constant="63" id="VlS-6T-zRk"/>
-                            <constraint firstItem="K6a-Xd-cM9" firstAttribute="leading" secondItem="Tph-4F-P7D" secondAttribute="trailing" constant="62" id="WoY-xi-eh6"/>
-                            <constraint firstItem="CTS-P6-Lt7" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="20" id="dFs-2X-IFW"/>
                             <constraint firstItem="Tph-4F-P7D" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="20" id="gUW-id-Zqf"/>
                             <constraint firstItem="wQb-9z-ceW" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="20" id="kNz-3i-vVm"/>
                             <constraint firstItem="XkS-Ez-uhC" firstAttribute="top" secondItem="goP-II-mbm" secondAttribute="bottom" constant="100" id="lHv-x9-MK6"/>
                             <constraint firstItem="Pga-9l-Pdt" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="20" id="m7K-0u-wUP"/>
+                            <constraint firstItem="K6a-Xd-cM9" firstAttribute="leading" secondItem="Tph-4F-P7D" secondAttribute="trailing" constant="102" id="oPf-6m-rtS"/>
                             <constraint firstItem="god-eC-LgL" firstAttribute="leading" secondItem="XkS-Ez-uhC" secondAttribute="trailing" constant="260" id="oQP-dU-Jpo"/>
-                            <constraint firstItem="Tph-4F-P7D" firstAttribute="leading" secondItem="Na1-ZZ-cKi" secondAttribute="trailing" constant="62" id="qUY-bq-LJX"/>
+                            <constraint firstItem="Pga-9l-Pdt" firstAttribute="leading" secondItem="K6a-Xd-cM9" secondAttribute="trailing" constant="103" id="ppH-QO-Gkz"/>
+                            <constraint firstItem="Tph-4F-P7D" firstAttribute="leading" secondItem="Na1-ZZ-cKi" secondAttribute="trailing" constant="79" id="qnx-Dn-5Ng"/>
                             <constraint firstItem="XkS-Ez-uhC" firstAttribute="leading" secondItem="cU0-G7-Iak" secondAttribute="leading" constant="260" id="rxO-V2-PBv"/>
                             <constraint firstItem="Os5-hx-KvZ" firstAttribute="leading" secondItem="god-eC-LgL" secondAttribute="trailing" constant="260" id="s6Y-vf-WlB"/>
                             <constraint firstItem="goP-II-mbm" firstAttribute="centerX" secondItem="cU0-G7-Iak" secondAttribute="centerX" id="u8V-rD-JTM"/>
                             <constraint firstItem="Na1-ZZ-cKi" firstAttribute="leading" secondItem="cU0-G7-Iak" secondAttribute="leading" constant="70" id="uxy-uB-gP0"/>
-                            <constraint firstItem="Na1-ZZ-cKi" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="8" symbolic="YES" id="vZ1-AC-q4p"/>
+                            <constraint firstItem="Na1-ZZ-cKi" firstAttribute="top" secondItem="gbN-Xo-XbX" secondAttribute="bottom" constant="22" id="vZ1-AC-q4p"/>
                         </constraints>
                     </view>
                     <connections>

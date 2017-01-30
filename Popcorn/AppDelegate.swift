@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var initialViewController: UIViewController = StoryboardScene.Video.initialViewController()
         let defaults = UserDefaults.standard
-        if !defaults.bool(forKey: "firstStart") {
+        if !defaults.bool(forKey: "setupFinished") {
             initialViewController = StoryboardScene.Introduction.introductionScene.viewController()
         }
         
