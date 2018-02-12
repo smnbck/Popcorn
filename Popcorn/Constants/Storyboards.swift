@@ -1,125 +1,91 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
+// swiftlint:disable sorted_imports
 import Foundation
 import UIKit
 
+// swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
-// swiftlint:disable line_length
-// swiftlint:disable type_body_length
 
-protocol StoryboardSceneType {
+protocol StoryboardType {
   static var storyboardName: String { get }
 }
 
-extension StoryboardSceneType {
-  static func storyboard() -> UIStoryboard {
-    return UIStoryboard(name: self.storyboardName, bundle: nil)
+extension StoryboardType {
+  static var storyboard: UIStoryboard {
+    return UIStoryboard(name: self.storyboardName, bundle: Bundle(for: BundleToken.self))
   }
+}
 
-  static func initialViewController() -> UIViewController {
-    guard let vc = storyboard().instantiateInitialViewController() else {
-      fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+struct SceneType<T: Any> {
+  let storyboard: StoryboardType.Type
+  let identifier: String
+
+  func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+      fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
     }
-    return vc
+    return controller
   }
 }
 
-extension StoryboardSceneType where Self: RawRepresentable, Self.RawValue == String {
-  func viewController() -> UIViewController {
-    return Self.storyboard().instantiateViewController(withIdentifier: self.rawValue)
-  }
-  static func viewController(identifier: Self) -> UIViewController {
-    return identifier.viewController()
+struct InitialSceneType<T: Any> {
+  let storyboard: StoryboardType.Type
+
+  func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
+      fatalError("ViewController is not of the expected class \(T.self).")
+    }
+    return controller
   }
 }
 
-protocol StoryboardSegueType: RawRepresentable { }
+protocol SegueType: RawRepresentable { }
 
 extension UIViewController {
-  func perform<S: StoryboardSegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
+  func perform<S: SegueType>(segue: S, sender: Any? = nil) where S.RawValue == String {
     performSegue(withIdentifier: segue.rawValue, sender: sender)
   }
 }
 
-struct StoryboardScene {
-  enum BottomMenu: String, StoryboardSceneType {
+// swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
+enum StoryboardScene {
+  enum BottomMenu: StoryboardType {
     static let storyboardName = "BottomMenu"
 
-    case bottomMenuScene = "BottomMenu"
-    static func instantiateBottomMenu() -> BottomMenuViewController {
-      guard let vc = StoryboardScene.BottomMenu.bottomMenuScene.viewController() as? BottomMenuViewController
-      else {
-        fatalError("ViewController 'BottomMenu' is not of the expected class BottomMenuViewController.")
-      }
-      return vc
-    }
+    static let bottomMenu = SceneType<Popcorn.BottomMenuViewController>(storyboard: BottomMenu.self, identifier: "BottomMenu")
   }
-  enum Introduction: String, StoryboardSceneType {
+  enum Introduction: StoryboardType {
     static let storyboardName = "Introduction"
 
-    case introductionScene = "Introduction"
-    static func instantiateIntroduction() -> IntroductionViewController {
-      guard let vc = StoryboardScene.Introduction.introductionScene.viewController() as? IntroductionViewController
-      else {
-        fatalError("ViewController 'Introduction' is not of the expected class IntroductionViewController.")
-      }
-      return vc
-    }
+    static let introduction = SceneType<Popcorn.IntroductionViewController>(storyboard: Introduction.self, identifier: "Introduction")
   }
-  enum Platforms: String, StoryboardSceneType {
+  enum Platforms: StoryboardType {
     static let storyboardName = "Platforms"
 
-    static func initialViewController() -> PlatformsViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? PlatformsViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
+    static let initialScene = InitialSceneType<Popcorn.PlatformsViewController>(storyboard: Platforms.self)
 
-    case platformsScene = "platforms"
-    static func instantiatePlatforms() -> PlatformsViewController {
-      guard let vc = StoryboardScene.Platforms.platformsScene.viewController() as? PlatformsViewController
-      else {
-        fatalError("ViewController 'platforms' is not of the expected class PlatformsViewController.")
-      }
-      return vc
-    }
+    static let platforms = SceneType<Popcorn.PlatformsViewController>(storyboard: Platforms.self, identifier: "platforms")
   }
-  enum Preview: String, StoryboardSceneType {
+  enum Preview: StoryboardType {
     static let storyboardName = "Preview"
 
-    case previewScene = "preview"
-    static func instantiatePreview() -> PreviewViewController {
-      guard let vc = StoryboardScene.Preview.previewScene.viewController() as? PreviewViewController
-      else {
-        fatalError("ViewController 'preview' is not of the expected class PreviewViewController.")
-      }
-      return vc
-    }
+    static let preview = SceneType<Popcorn.PreviewViewController>(storyboard: Preview.self, identifier: "preview")
   }
-  enum TopMenu: String, StoryboardSceneType {
+  enum TopMenu: StoryboardType {
     static let storyboardName = "TopMenu"
 
-    case topMenuScene = "TopMenu"
-    static func instantiateTopMenu() -> TopMenuViewController {
-      guard let vc = StoryboardScene.TopMenu.topMenuScene.viewController() as? TopMenuViewController
-      else {
-        fatalError("ViewController 'TopMenu' is not of the expected class TopMenuViewController.")
-      }
-      return vc
-    }
+    static let topMenu = SceneType<Popcorn.TopMenuViewController>(storyboard: TopMenu.self, identifier: "TopMenu")
   }
-  enum Video: StoryboardSceneType {
+  enum Video: StoryboardType {
     static let storyboardName = "Video"
 
-    static func initialViewController() -> VideoViewController {
-      guard let vc = storyboard().instantiateInitialViewController() as? VideoViewController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
+    static let initialScene = InitialSceneType<Popcorn.VideoViewController>(storyboard: Video.self)
   }
 }
 
-struct StoryboardSegue {
+enum StoryboardSegue {
 }
+// swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
+
+private final class BundleToken {}

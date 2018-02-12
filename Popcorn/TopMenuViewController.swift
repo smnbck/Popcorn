@@ -312,7 +312,7 @@ class TopMenuViewController: MenuViewController, UICollectionViewDataSource, UIC
     }
     
     @IBAction func platformButtonPressed(_ sender: Any) {
-        let viewController = StoryboardScene.Platforms.platformsScene.viewController()
+        let viewController = StoryboardScene.Platforms.platforms.instantiate()
         self.present(viewController, animated: true, completion: nil)
     }
 }

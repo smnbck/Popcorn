@@ -91,7 +91,7 @@ class PlatformsViewController: UIViewController, UITableViewDataSource, UITableV
             self.dismiss(animated: true, completion: nil)
         } else {
             defaults.set(true, forKey: "setupFinished")
-            let vc = StoryboardScene.Video.initialViewController()
+            let vc = StoryboardScene.Video.initialScene.instantiate()
             self.present(vc, animated: true, completion: nil)
         }
     }

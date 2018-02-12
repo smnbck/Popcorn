@@ -50,7 +50,7 @@ class IntroductionViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         if self.transitionCount == 2 {
-            if let vc = StoryboardScene.Platforms.platformsScene.viewController() as? PlatformsViewController {
+            if let vc = StoryboardScene.Platforms.platforms.instantiate() as? PlatformsViewController {
                 self.present(vc, animated: true, completion: {
 //                    self.dismiss(animated: true, completion: nil)
                 })

@@ -13,15 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        var initialViewController: UIViewController = StoryboardScene.Video.initialViewController()
+        var initialViewController: UIViewController = StoryboardScene.Video.initialScene.instantiate()
         let defaults = UserDefaults.standard
         if !defaults.bool(forKey: "setupFinished") {
-            initialViewController = StoryboardScene.Introduction.introductionScene.viewController()
+            initialViewController = StoryboardScene.Introduction.introduction.instantiate()
         }
         
         self.window?.rootViewController = initialViewController

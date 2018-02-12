@@ -145,7 +145,7 @@ class VideoViewController: UIViewController {
     }
     
     func loadTopMenuViewController() {
-        if let topMenuViewController = StoryboardScene.TopMenu.topMenuScene.viewController() as? TopMenuViewController {
+        if let topMenuViewController = StoryboardScene.TopMenu.topMenu.instantiate() as? TopMenuViewController {
             topMenuViewController.videoViewController = self
             topMenuViewController.startedVideoIDs = self.startedVideoIDs
             
@@ -157,7 +157,7 @@ class VideoViewController: UIViewController {
             
             self.addChildViewController(topMenuViewController)
             topMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.topMenuView.frame.size.width, height: self.topMenuView.frame.size.height)
-            self.topMenuView.addSubview(topMenuViewController.view)
+            self.topMenuView.contentView.addSubview(topMenuViewController.view)
             topMenuViewController.didMove(toParentViewController: self)
             
             UIView.animate(withDuration: 0.3, animations: {
@@ -182,7 +182,7 @@ class VideoViewController: UIViewController {
     }
     
     func loadBottomMenuViewController() {
-        if let bottomMenuViewController = StoryboardScene.BottomMenu.bottomMenuScene.viewController() as? BottomMenuViewController {
+        if let bottomMenuViewController = StoryboardScene.BottomMenu.bottomMenu.instantiate() as? BottomMenuViewController {
             bottomMenuViewController.videoViewController = self
             bottomMenuViewController.mediaStream = self.currentMediaStream
             bottomMenuViewController.passedEpisode = self.passedEpisode
@@ -190,7 +190,7 @@ class VideoViewController: UIViewController {
             
             self.addChildViewController(bottomMenuViewController)
             bottomMenuViewController.view.frame = CGRect(x: 0, y: 0, width: self.bottomMenuView.frame.size.width, height: self.bottomMenuView.frame.size.height)
-            self.bottomMenuView.addSubview(bottomMenuViewController.view)
+            self.bottomMenuView.contentView.addSubview(bottomMenuViewController.view)
             bottomMenuViewController.didMove(toParentViewController: self)
             
             UIView.animate(withDuration: 0.3, animations: {

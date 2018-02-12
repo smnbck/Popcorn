@@ -1,13 +1,17 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
-#if os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  typealias Color = UIColor
-#elseif os(OSX)
+#if os(OSX)
   import AppKit.NSColor
   typealias Color = NSColor
+#elseif os(iOS) || os(tvOS) || os(watchOS)
+  import UIKit.UIColor
+  typealias Color = UIColor
 #endif
 
+// swiftlint:disable superfluous_disable_command
+// swiftlint:disable file_length
+
+// swiftlint:disable operator_usage_whitespace
 extension Color {
   convenience init(rgbaValue: UInt32) {
     let red   = CGFloat((rgbaValue >> 24) & 0xff) / 255.0
@@ -18,38 +22,27 @@ extension Color {
     self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
 }
+// swiftlint:enable operator_usage_whitespace
 
-// swiftlint:disable file_length
-// swiftlint:disable line_length
+// swiftlint:disable identifier_name line_length type_body_length
+struct ColorName {
+  let rgbaValue: UInt32
+  var color: Color { return Color(named: self) }
 
-// swiftlint:disable type_body_length
-enum ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#b1405b"></span>
   /// Alpha: 100% <br/> (0xb1405bff)
-  case darkMagenta
+  static let darkMagenta = ColorName(rgbaValue: 0xb1405bff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff3566"></span>
   /// Alpha: 100% <br/> (0xff3566ff)
-  case magenta
+  static let magenta = ColorName(rgbaValue: 0xff3566ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffa900"></span>
   /// Alpha: 100% <br/> (0xffa900ff)
-  case orange
-
-  var rgbaValue: UInt32 {
-    switch self {
-    case .darkMagenta: return 0xb1405bff
-    case .magenta: return 0xff3566ff
-    case .orange: return 0xffa900ff
-    }
-  }
-
-  var color: Color {
-    return Color(named: self)
-  }
+  static let orange = ColorName(rgbaValue: 0xffa900ff)
 }
-// swiftlint:enable type_body_length
+// swiftlint:enable identifier_name line_length type_body_length
 
 extension Color {
-  convenience init(named name: ColorName) {
-    self.init(rgbaValue: name.rgbaValue)
+  convenience init(named color: ColorName) {
+    self.init(rgbaValue: color.rgbaValue)
   }
 }
