@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,29 +102,29 @@
                                         </view>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="192" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-wy-F7k">
                                             <rect key="frame" x="70" y="342" width="1780" height="674"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeCell" focusStyle="custom" rowHeight="192" id="7cY-3Z-moX" customClass="PreviewTableViewCell" customModule="Popcorn" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="66" width="1780" height="192"/>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EpisodeCell" focusStyle="custom" rowHeight="192" id="7cY-3Z-moX" customClass="PreviewTableViewCell" customModule="Popcorn" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="66" width="1740" height="192"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7cY-3Z-moX" id="3hn-AF-2ks">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1764" height="192"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1740" height="192"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode 1: Die Intrige" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODH-QP-Drr">
-                                                                <rect key="frame" x="16" y="8" width="331" height="43"/>
+                                                                <rect key="frame" x="16" y="23" width="331" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hier steht was alles in dieser spannenden Folge passieren wird." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-3d-dFI">
-                                                                <rect key="frame" x="16" y="59" width="1417" height="39"/>
+                                                                <rect key="frame" x="16" y="74" width="1327" height="39"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="houseofcardsposter" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-S4-PnC">
-                                                                <rect key="frame" x="1469" y="12" width="299" height="168"/>
+                                                                <rect key="frame" x="1379" y="12" width="299" height="168"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="4gC-S4-PnC" secondAttribute="height" multiplier="16:9" id="G97-Fa-cdh"/>
                                                                 </constraints>
@@ -169,8 +169,8 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="B9b-GN-0xk" firstAttribute="leading" secondItem="BJK-V4-tw6" secondAttribute="leading" id="MrI-9s-upD"/>
-                            <constraint firstItem="b8y-ed-CCN" firstAttribute="top" secondItem="B9b-GN-0xk" secondAttribute="bottom" id="i5n-cE-gYR"/>
-                            <constraint firstItem="B9b-GN-0xk" firstAttribute="top" secondItem="gVB-Sb-4cr" secondAttribute="bottom" id="orC-xo-VjC"/>
+                            <constraint firstAttribute="bottom" secondItem="B9b-GN-0xk" secondAttribute="bottom" id="i5n-cE-gYR"/>
+                            <constraint firstItem="B9b-GN-0xk" firstAttribute="top" secondItem="BJK-V4-tw6" secondAttribute="top" id="orC-xo-VjC"/>
                             <constraint firstAttribute="trailing" secondItem="B9b-GN-0xk" secondAttribute="trailing" id="wnf-OM-VPh"/>
                         </constraints>
                     </view>

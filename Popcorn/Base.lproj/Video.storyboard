@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-53-XrK">
-                                <rect key="frame" x="907" y="513" width="106" height="53"/>
+                                <rect key="frame" x="909" y="513" width="103" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -101,9 +101,9 @@
                             <constraint firstAttribute="trailing" secondItem="UUd-PV-kpN" secondAttribute="trailing" id="MDY-Jd-9MC"/>
                             <constraint firstAttribute="trailing" secondItem="JYp-nf-0Pj" secondAttribute="trailing" id="MFU-VR-vMA"/>
                             <constraint firstItem="Rem-YJ-qnR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RfG-kv-2Ao"/>
-                            <constraint firstItem="JYp-nf-0Pj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZEq-8B-VmO"/>
+                            <constraint firstItem="JYp-nf-0Pj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZEq-8B-VmO"/>
                             <constraint firstItem="JYp-nf-0Pj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bSB-z3-2gA"/>
-                            <constraint firstItem="UUd-PV-kpN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-900" id="gk0-th-pFi"/>
+                            <constraint firstItem="UUd-PV-kpN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-900" id="gk0-th-pFi"/>
                             <constraint firstItem="zgK-53-XrK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wf9-lG-RXO"/>
                             <constraint firstItem="zgK-53-XrK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zof-2E-060"/>
                         </constraints>

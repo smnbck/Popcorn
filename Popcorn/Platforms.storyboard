@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aiK-bO-Xjf">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aiK-bO-Xjf">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,36 +24,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QJe-EW-cCW">
-                                <rect key="frame" x="36" y="20" width="1828" height="100"/>
+                                <rect key="frame" x="36" y="20" width="1738" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0Mx-AE-kSn"/>
                                 </constraints>
                             </imageView>
                             <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="CvO-5f-ruH">
-                                <rect key="frame" x="220" y="156" width="1480" height="798"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="310" y="156" width="1300" height="798"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServiceCell" focusStyle="custom" rowHeight="131" id="odU-gV-9E2" customClass="PlatformsTableViewCell" customModule="Popcorn" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="1480" height="131"/>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ServiceCell" focusStyle="custom" rowHeight="131" id="odU-gV-9E2" customClass="PlatformsTableViewCell" customModule="Popcorn" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="1300" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="odU-gV-9E2" id="Klv-uJ-Qnw">
-                                            <rect key="frame" x="0.0" y="0.0" width="1464" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1300" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addIcon" translatesAutoresizingMaskIntoConstraints="NO" id="I7v-zK-tdt">
-                                                    <rect key="frame" x="1349" y="0.0" width="131" height="131"/>
+                                                    <rect key="frame" x="1259" y="0.0" width="131" height="131"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="I7v-zK-tdt" secondAttribute="height" multiplier="1:1" id="vuz-g9-4WM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bietet dir 115 neue Filme und 89 neue Serien für deine Mediathek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nso-4J-hIZ">
-                                                    <rect key="frame" x="236" y="72" width="915" height="39"/>
+                                                    <rect key="frame" x="236" y="87" width="914" height="39"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChF-J1-5b7">
-                                                    <rect key="frame" x="236" y="16" width="83" height="48"/>
+                                                    <rect key="frame" x="236" y="31" width="82" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -113,11 +113,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1354143418" green="0.1354143418" blue="0.1354143418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fXz-y1-voV" secondAttribute="bottom" constant="20" id="8Bx-4F-kU3"/>
                             <constraint firstItem="fXz-y1-voV" firstAttribute="centerX" secondItem="vKw-Zr-d88" secondAttribute="centerX" id="Gn7-jJ-qQw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QJe-EW-cCW" secondAttribute="trailing" constant="36" id="Nnj-9m-X9g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CvO-5f-ruH" secondAttribute="trailing" constant="200" id="O56-VZ-G6Z"/>
-                            <constraint firstItem="4kI-i4-h1c" firstAttribute="top" secondItem="fXz-y1-voV" secondAttribute="bottom" constant="20" id="PjA-xx-EjD"/>
-                            <constraint firstItem="QJe-EW-cCW" firstAttribute="top" secondItem="gyP-lU-gjM" secondAttribute="bottom" constant="20" id="QRy-UV-cFH"/>
+                            <constraint firstItem="QJe-EW-cCW" firstAttribute="top" secondItem="vKw-Zr-d88" secondAttribute="top" constant="20" id="SjV-EA-NRc"/>
                             <constraint firstItem="CvO-5f-ruH" firstAttribute="leading" secondItem="vKw-Zr-d88" secondAttribute="leadingMargin" constant="200" id="VqT-eW-SKD"/>
                             <constraint firstItem="QJe-EW-cCW" firstAttribute="leading" secondItem="vKw-Zr-d88" secondAttribute="leading" constant="36" id="YeN-uj-IOb"/>
                             <constraint firstItem="CvO-5f-ruH" firstAttribute="top" secondItem="QJe-EW-cCW" secondAttribute="bottom" constant="36" id="gJN-f4-XL9"/>

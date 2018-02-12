@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHK-O1-uBv">
-                                <rect key="frame" x="0.0" y="680" width="1920" height="360"/>
+                                <rect key="frame" x="0.0" y="692" width="1920" height="360"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ähnliches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-5g-Dzf">
-                                        <rect key="frame" x="70" y="0.0" width="225" height="55"/>
+                                        <rect key="frame" x="70" y="0.0" width="222" height="55"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -64,14 +64,14 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnailLive" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-iV-ihp">
-                                                            <rect key="frame" x="13" y="13" width="240" height="155"/>
+                                                            <rect key="frame" x="3" y="3" width="274" height="174"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="274" id="7kW-B8-dfq"/>
                                                                 <constraint firstAttribute="height" constant="174" id="EaI-A4-F3p"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House of Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7C-4d-bJm" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                            <rect key="frame" x="8" y="217" width="264" height="43"/>
+                                                            <rect key="frame" x="98" y="217" width="174" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -219,7 +219,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-9z-jW6">
-                                <rect key="frame" x="1597" y="537" width="233" height="86"/>
+                                <rect key="frame" x="1507" y="537" width="233" height="86"/>
                                 <string key="text">Um 22:15 folgt
 testfilm</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -230,18 +230,18 @@ testfilm</string>
                         <constraints>
                             <constraint firstItem="IHK-O1-uBv" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" id="C8H-lu-0ZZ"/>
                             <constraint firstItem="AV3-7Y-mH4" firstAttribute="centerX" secondItem="fdT-id-bh4" secondAttribute="centerX" constant="-705" id="DMK-BQ-qbj"/>
-                            <constraint firstItem="HDc-os-6aH" firstAttribute="top" secondItem="SdU-op-KNt" secondAttribute="bottom" constant="94" id="EEC-Mh-3WU"/>
-                            <constraint firstItem="qTl-7t-LKb" firstAttribute="top" secondItem="SdU-op-KNt" secondAttribute="bottom" constant="94" id="KqR-QC-JqF"/>
                             <constraint firstItem="dni-Dc-uvg" firstAttribute="top" secondItem="HDc-os-6aH" secondAttribute="bottom" constant="76" id="MiE-DM-Llc"/>
                             <constraint firstItem="AV3-7Y-mH4" firstAttribute="centerY" secondItem="fdT-id-bh4" secondAttribute="centerY" constant="40" id="OQC-FA-icx"/>
+                            <constraint firstItem="qTl-7t-LKb" firstAttribute="top" secondItem="fdT-id-bh4" secondAttribute="top" constant="94" id="WwS-be-iXr"/>
                             <constraint firstItem="dni-Dc-uvg" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" constant="70" id="h1I-dT-0k3"/>
                             <constraint firstItem="dmv-9z-jW6" firstAttribute="centerY" secondItem="AV3-7Y-mH4" secondAttribute="centerY" id="lKe-t5-wan"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dmv-9z-jW6" secondAttribute="trailing" constant="70" id="m6v-bc-Fkp"/>
                             <constraint firstAttribute="trailing" secondItem="HDc-os-6aH" secondAttribute="trailing" constant="70" id="n9m-KU-3Cz"/>
+                            <constraint firstAttribute="bottom" secondItem="IHK-O1-uBv" secondAttribute="bottom" constant="40" id="szn-Sv-btQ"/>
                             <constraint firstItem="qTl-7t-LKb" firstAttribute="leading" secondItem="fdT-id-bh4" secondAttribute="leading" constant="70" id="t0y-yc-Dr8"/>
                             <constraint firstAttribute="trailing" secondItem="dni-Dc-uvg" secondAttribute="trailing" constant="70" id="wy0-fM-RU3"/>
                             <constraint firstAttribute="trailing" secondItem="IHK-O1-uBv" secondAttribute="trailing" id="xEE-3X-3gW"/>
-                            <constraint firstItem="t9U-4r-DPF" firstAttribute="top" secondItem="IHK-O1-uBv" secondAttribute="bottom" constant="40" id="zfU-1U-AYD"/>
+                            <constraint firstItem="HDc-os-6aH" firstAttribute="top" secondItem="fdT-id-bh4" secondAttribute="top" constant="94" id="yKB-JG-tVF"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
